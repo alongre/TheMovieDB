@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TmdbMovie: Movie{
+class TmdbMovie: Video{
     
     //MARK: Stored Properties
     private var _imdbID: String

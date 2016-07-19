@@ -16,7 +16,7 @@ class IMDB: WebAPIDelegate{
     
     
     
-    func fetchMovies(searchString:String, pageIndex:Int?, completionHandler: ([Movie]) -> Void){
+    func fetchMovies(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
        
         
         var index = 1
@@ -50,7 +50,7 @@ class IMDB: WebAPIDelegate{
         
     }
     
-    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Movie]) -> Void){
+    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
         
         
         var index = 1
@@ -84,7 +84,7 @@ class IMDB: WebAPIDelegate{
         
     }
 
-    func fetchDetailedVideoInfo(id:String,completionHandler: (Movie) -> Void){
+    func fetchDetailedVideoInfo(id:String,completionHandler: (Video) -> Void){
         
         
         let url = NSURL(string: Constants.IMDB_API)
@@ -109,11 +109,11 @@ class IMDB: WebAPIDelegate{
         
     }
 
-    func fetchDetailedTVInfo(id:String,completionHandler: (Movie) -> Void){
+    func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void){
         
     }
     
-    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Movie]) -> Void){
+    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
         
     }
     
@@ -122,12 +122,12 @@ class IMDB: WebAPIDelegate{
     }
 
     
-    func fetchPersonMovies(id: String, completionHandler: ([Movie]) -> Void){
+    func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void){
     }
     
     
-    func dataToMovies(data:NSData?) -> [Movie] {
-        var movies = [Movie]()
+    func dataToMovies(data:NSData?) -> [Video] {
+        var movies = [Video]()
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let isDataExist = json["Response"]

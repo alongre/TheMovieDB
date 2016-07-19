@@ -23,7 +23,7 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
     
     //MARK: Properties
     var webAPI: WebAPIDelegate?
-    var movies: [Movie]?
+    var movies: [Video]?
     private var lastVideoCount: Int = 0;
     private var pageIndex:Int = 1;
     
@@ -106,7 +106,7 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
             }
         }
     }
-    func reloadData(movies: [Movie]){
+    func reloadData(movies: [Video]){
         self.resultPerRequest = movies.count
         print("------Movies for single request: \(movies.count)------")
         self.movies?.appendContentsOf(movies)
@@ -179,11 +179,11 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
     
     
     
-    func loadVideoInfo(movie: Movie)
+    func loadVideoInfo(movie: Video)
     {
         
          if let videoInfo = storyboard?.instantiateViewControllerWithIdentifier("VideoInfo") as? VideosInfoTableViewController {
-            videoInfo.movie = movie
+            videoInfo.video = movie
             navigationController?.pushViewController(videoInfo, animated: true)
         }
         

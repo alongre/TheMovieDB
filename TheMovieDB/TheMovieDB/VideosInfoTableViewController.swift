@@ -26,7 +26,7 @@ class VideosInfoTableViewController: UITableViewController {
     @IBOutlet weak var directorTextView: UITextView!
     @IBOutlet weak var tvSeasonsTextView: UITextView!
     //MARK: - Stored Properties
-    var movie: Movie?
+    var video: Video?
     
     
     
@@ -60,7 +60,7 @@ class VideosInfoTableViewController: UITableViewController {
     //MARK: - Table view methods
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 2 {
-            WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((movie?.id)!, completionHandler: loadVideoInfo)
+            WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, completionHandler: loadVideoInfo)
         }
     }
     
@@ -69,7 +69,7 @@ class VideosInfoTableViewController: UITableViewController {
             return 4
         }
         else{
-            if tvSeasonsTextView.text.characters.count > 0{
+            if video?.videoType == VideoType.TV{
                 return 1
             }
             else{
@@ -83,28 +83,35 @@ class VideosInfoTableViewController: UITableViewController {
     func reloadData(){
       
         
-        if let movie = movie{
+        
+        if let newVideo = video{
             
-                      self.navigationItem.title = movie.title
-            if movie.posterURL == "N/A"{
+            
+            
+            self.navigationItem.title = newVideo.title
+            if newVideo.posterURL == "N/A"{
                 posterImage.image = UIImage(named: "no_image")
             }
             else{
                 
-                let URL = NSURL(string: movie.posterURL!)!
+                let URL = NSURL(string: newVideo.posterURL!)!
                 posterImage.af_setImageWithURL(URL)
             }
-            dateLabel.text = movie.releaseDate
-            runtimeLabel.text = movie.runtime!
-            plotTextView.text = movie.plot
+           
+            runtimeLabel.text = newVideo.runtime
+            plotTextView.text = newVideo.plot
             plotTextView.scrollRangeToVisible(NSMakeRange(0, 0))
-
+            loadGenres()
             
             
-            loadGenres()           
+            dateLabel.text = newVideo.releaseDate
+            
+        
             loadDataFromIMDB()
-            
-          
+            if newVideo.videoType == VideoType.TV{
+                tvSeasonsTextView.text = newVideo.description
+            }
+
             
         }
         
@@ -129,7 +136,7 @@ class VideosInfoTableViewController: UITableViewController {
     private func loadGenres(){
         genreLabel.text?.removeAll()
         var genreList: String = ""
-        if let genres = movie!.genre{
+        if let genres = video!.genre{
             for genre in genres {
                 genreList = genreList + genre + ","
             }
@@ -141,26 +148,36 @@ class VideosInfoTableViewController: UITableViewController {
     
     
     private func loadDataFromIMDB(){
-        if let tmdbMovie = movie as? TmdbMovie{
-            if tmdbMovie.imdbID.characters.count > 0 {
-                WebFactory.getWebAPI(WebAPI.IMDB).fetchDetailedVideoInfo(tmdbMovie.imdbID, completionHandler: updateIMDBDetails)
-                return
-            }
+        
+        var imdbID: String
+        if video?.videoType == VideoType.Movie{
+            imdbID = (video as! TmdbMovie).imdbID
+        }
+        else{
+            imdbID = (video as! TmdbTV).imdbID
         }
         
-        votersLabel.text = movie!.voters
-        ratingLabel.text = movie!.rating
-        directorTextView.text = movie!.director
-        loadActors(movie!.actors)
+    
+        
+            if imdbID.characters.count > 0 {
+                WebFactory.getWebAPI(WebAPI.IMDB).fetchDetailedVideoInfo(imdbID, completionHandler: updateIMDBDetails)
+                return
+            }
+        
+        
+        votersLabel.text = video!.voters
+        ratingLabel.text = video!.rating
+        directorTextView.text = video!.director
+        loadActors(video!.actors)
 
         
     }
     
-    func updateIMDBDetails(movie: Movie){
-        loadActors(movie.actors)
-        votersLabel.text = movie.voters
-        ratingLabel.text = movie.rating
-        directorTextView.text = movie.director
+    func updateIMDBDetails(video: Video){
+        loadActors(video.actors)
+        votersLabel.text = video.voters
+        ratingLabel.text = video.rating
+        directorTextView.text = video.director
 
         
     }

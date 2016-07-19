@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImdbMovie : Movie{
+class ImdbMovie : Video{
     
     //MARK: Stored Properties
     

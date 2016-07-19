@@ -17,7 +17,7 @@ class TMDB: WebAPIDelegate{
     
     //MARK: - WebAPIDelegate methods
     
-    func fetchMovies(movieName: String, pageIndex: Int?,completionHandler: ([Movie]) -> Void){
+    func fetchMovies(movieName: String, pageIndex: Int?,completionHandler: ([Video]) -> Void){
         var index = 1
         if let pageIndex = pageIndex {
             index = pageIndex
@@ -45,14 +45,14 @@ class TMDB: WebAPIDelegate{
     }
     
     
-    func fetchDetailedVideoInfo(id:String,completionHandler: (Movie) -> Void)
+    func fetchDetailedVideoInfo(id:String,completionHandler: (Video) -> Void)
     {
         
         
         
         let url = NSURL(string: Constants.TMDB_MOVIE_WITH_ID_API + "/\(id)")
         let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY]
-                                              
+                                                
         Alamofire.request(
             .GET,
             url!,
@@ -70,9 +70,11 @@ class TMDB: WebAPIDelegate{
        
 
     }
-    func fetchDetailedTVInfo(id:String,completionHandler: (Movie) -> Void){
+    func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void){
         let url = NSURL(string: Constants.TMDB_TV_WITH_ID_API + "/\(id)")
-        let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY]
+        let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY,
+                                                "append_to_response":"external_ids"]
+
         
         Alamofire.request(
             .GET,
@@ -91,7 +93,8 @@ class TMDB: WebAPIDelegate{
 
     }
 
-    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Movie]) -> Void){
+    
+    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
         
         var index = 1
         if let pageIndex = pageIndex {
@@ -121,7 +124,7 @@ class TMDB: WebAPIDelegate{
         
         
     }
-    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Movie]) -> Void){
+    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
         var index = 1
         if let pageIndex = pageIndex {
             index = pageIndex
@@ -197,7 +200,7 @@ class TMDB: WebAPIDelegate{
     }
 
     
-    func fetchPersonMovies(id: String, completionHandler: ([Movie]) -> Void){
+    func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void){
         let url = NSURL(string: Constants.TMDB_PERSON_DETAILS_API + "/\(id)" + "/movie_credits")
         let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY]
         
@@ -255,8 +258,8 @@ class TMDB: WebAPIDelegate{
         return actor
     }
 
-    func dataToMoviesPerActor(data:NSData?) -> [Movie] {
-        var movies = [Movie]()
+    func dataToMoviesPerActor(data:NSData?) -> [Video] {
+        var movies = [Video]()
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let results = json["cast"]
@@ -286,8 +289,8 @@ class TMDB: WebAPIDelegate{
     }
 
     
-    func dataToMovies(data:NSData?) -> [Movie] {
-        var movies = [Movie]()
+    func dataToMovies(data:NSData?) -> [Video] {
+        var movies = [Video]()
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let results = json["results"]
@@ -319,8 +322,8 @@ class TMDB: WebAPIDelegate{
         return movies
     }
 
-    func dataToTV(data:NSData?) -> [Movie] {
-        var movies = [Movie]()
+    func dataToTV(data:NSData?) -> [Video] {
+        var movies = [Video]()
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let results = json["results"]
@@ -374,39 +377,44 @@ class TMDB: WebAPIDelegate{
      
     }
 
-    func dataToFullInfoTV(data:NSData?) -> TmdbMovie? {
+    func dataToFullInfoTV(data:NSData?) -> TmdbTV? {
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let id = json["id"].stringValue
         let title = json["name"].stringValue
-        let imdbID = json["imdb_id"].stringValue
-        
-        let movie = TmdbMovie(title: title, id: id,imdbID: imdbID)
+        let ids = json["external_ids"]
+        let imdbID = ids["imdb_id"].stringValue
+        let tv = TmdbTV(title: title, id: id,imdbID: imdbID)
         
                
         
-        if (json["profile_path"].null == nil){
-            movie.posterURL = Constants.TMDB_LARGE_IMAGE_API + json["profile_path"].stringValue
+        if (json["poster_path"].null == nil){
+            tv.posterURL = Constants.TMDB_LARGE_IMAGE_API + json["poster_path"].stringValue
         }
         else
         {
-            movie.posterURL  = "N/A"
+            tv.posterURL  = "N/A"
         }
 
         
         
-        movie.plot = json["overview"].stringValue
-        movie.runtime = json["episode_run_time"].stringValue
-        movie.releaseDate = json["first_air_date"].stringValue
-        movie.endDate = json["last_air_date"].stringValue
+        tv.plot = json["overview"].stringValue
+        let runTime = json["episode_run_time"][0]
+        tv.runtime =  runTime.stringValue
+        tv.releaseDate = json["first_air_date"].stringValue
+        tv.endDate = json["last_air_date"].stringValue
+        tv.numberOfEpisodes = json["number_of_episodes"].intValue
+        tv.numberOfSeason = json["number_of_seasons"].intValue
+        
+
         let genres = json["genres"]
-        movie.genre = [String]()
+        tv.genre = [String]()
         
         for gen in genres {
-            movie.genre?.append(gen.1["name"].stringValue)
+            tv.genre?.append(gen.1["name"].stringValue)
         }
-        print(movie)
-        return movie
+        print(tv)
+        return tv
         
         
     }

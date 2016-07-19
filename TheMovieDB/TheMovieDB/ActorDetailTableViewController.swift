@@ -25,7 +25,7 @@ class ActorDetailTableViewController: UITableViewController {
     //MARK: Properties
 
     var actor: Character?
-    var movies: [Movie]?
+    var movies: [Video]?
     
     
     //MARK: - Life Cycle view
@@ -101,7 +101,7 @@ class ActorDetailTableViewController: UITableViewController {
 
     
     //MARK: - Segue
-    func loadFilmsInfo(movies: [Movie])
+    func loadFilmsInfo(movies: [Video])
     {
         
         

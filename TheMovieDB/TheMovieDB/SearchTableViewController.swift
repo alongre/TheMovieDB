@@ -23,8 +23,9 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     
     //MARK: Properties
     var webAPI: WebAPIDelegate?
-    var movies: [Movie]?
+    var movies: [Video]?
     var pageIndex: Int = 0
+    var imageCache = [String:UIImage]()
     private var lastVideoCount: Int = 0;
     private var resultPerRequest:Int?
     
@@ -67,6 +68,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         pageIndex = 1
         
         if movies?.count > 0{
+           // updateImageCache()
             sortVideos()
         }
         
@@ -74,7 +76,22 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+//    func updateImageCache(){
+//        for video in movies! {
+//            print(video.id)
+//            let keyExists = imageCache[video.id] != nil
+//            if keyExists == false{
+//                let imageView = UIImageView()
+//                let URL = NSURL(string: video.posterURL!)!
+//               // imageView.af_imageDownloader?.downloadImage(URLRequest: URL, completion: <#T##CompletionHandler?##CompletionHandler?##Response<Image, NSError> -> Void#>)(URL)
+//                imageView.af_setImageWithURL(URL)
+//                imageCache[video.id] = imageView
+////                
+////                
+//            }
+//        }
+//    }
     
     func tableViewTapped(tap:UITapGestureRecognizer)
     {
@@ -106,7 +123,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     //MARK: UISearchBarDelegate
     func searchBarSearchButtonClicked(searchBar: UISearchBar){
         self.searchBar.resignFirstResponder()
-        self.movies = [Movie]()
+        self.movies = [Video]()
         fetchVideos()
         
     }
@@ -114,7 +131,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
 
     
     
-    func reloadData(movies: [Movie]){
+    func reloadData(movies: [Video]){
     //  self.resultPerRequest = movies.count
       self.movies?.appendContentsOf(movies)
     
@@ -151,8 +168,16 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         }
         else{
           
-            let URL = NSURL(string: movie.posterURL!)!
-            movieCell.posterImage.af_setImageWithURL(URL)
+            
+            if let imageView = imageCache[movie.id]{
+                movieCell.posterImage.image = imageView
+            }
+            else
+            {
+                let URL = NSURL(string: movie.posterURL!)!
+                movieCell.posterImage.af_setImageWithURL(URL)
+                imageCache[movie.id] = movieCell.posterImage.image
+            }
 
         }
         
@@ -176,7 +201,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let movie = movies![indexPath.row] as Movie
+        let movie = movies![indexPath.row] as Video
         switch segmentControl.selectedSegmentIndex {
         case 0:
             webAPI?.fetchDetailedVideoInfo(movie.id, completionHandler: loadVideoInfo)
@@ -217,11 +242,11 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     
     //MARK: Segue
     
-    func loadVideoInfo(movie: Movie)
+    func loadVideoInfo(movie: Video)
     {
         
         if let videoInfo = storyboard?.instantiateViewControllerWithIdentifier("VideoInfo") as? VideosInfoTableViewController {
-            videoInfo.movie = movie
+            videoInfo.video = movie
             navigationController?.pushViewController(videoInfo, animated: true)
         }
         

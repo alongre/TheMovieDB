@@ -10,14 +10,14 @@ import UIKit
 
 
 protocol WebAPIDelegate {
-    func fetchMovies(searchString: String, pageIndex: Int?,completionHandler: ([Movie]) -> Void)
-    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Movie]) -> Void)
-    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Movie]) -> Void)
-    func fetchDetailedVideoInfo(id:String,completionHandler: (Movie) -> Void)
+    func fetchMovies(searchString: String, pageIndex: Int?,completionHandler: ([Video]) -> Void)
+    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void)
+    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void)
+    func fetchDetailedVideoInfo(id:String,completionHandler: (Video) -> Void)
     func fetchCastList(id: String, completionHandler: ([Character]) -> Void)
     func fetchPersonDetail(id: String, completionHandler: (Character) -> Void)
-    func fetchPersonMovies(id: String, completionHandler: ([Movie]) -> Void)
-    func fetchDetailedTVInfo(id:String,completionHandler: (Movie) -> Void)
+    func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void)
+    func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void)
 
     
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Movie {
+class Video {
 
     //MARK: - Stored Properties
     private var _title: String
@@ -22,8 +22,7 @@ class Movie {
     private var _voters: String?
     private var _posterURL: String?
     private var _releaseDate: String?
-    private var _endDate: String?
-    
+    private var _videoType: VideoType
      
   
   
@@ -51,25 +50,18 @@ class Movie {
         }
     }
 
-    var endDate: String? {
-        get{
-            return _endDate
-        }
-        set{
-            _endDate = newValue
-        }
-    }
+   
 
     
     var runtime: String? {
         get{
-            return _runtime
+            return "\(_runtime!) min"
         }
         set{
             _runtime = newValue
         }
     }
-    
+
     var actors: [Character]? {
         get{
             return _actors
@@ -138,6 +130,14 @@ class Movie {
         }
     }
     
+    var videoType: VideoType {
+        get{
+            return _videoType
+        }
+        set{
+            _videoType = newValue
+        }
+    }
 
     
     //MARK: - Initializor
@@ -145,6 +145,7 @@ class Movie {
     {
         self._title = title
         self._id = id
+        _videoType = VideoType.Movie
     }
     
     
@@ -153,3 +154,10 @@ class Movie {
     }
     
 }
+
+
+enum VideoType{
+    case Movie
+    case TV
+}
+
