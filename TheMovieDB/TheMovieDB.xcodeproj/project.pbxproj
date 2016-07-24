@@ -10,6 +10,12 @@
 		8AB38B72B428E327DE4B1405 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF299A3F6B558F323209F84C /* Pods_TheMovieDB.framework */; };
 		B116C4131D3A810F0001B616 /* TableVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B116C4121D3A810F0001B616 /* TableVCExtension.swift */; };
 		B11F15531D3D5A4F00B0487F /* TmdbTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F15521D3D5A4F00B0487F /* TmdbTV.swift */; };
+		B12F64AE1D449E1A00BF97B1 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64AD1D449E1A00BF97B1 /* Season.swift */; };
+		B12F64B01D44C96500BF97B1 /* TVSeasonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64AF1D44C96500BF97B1 /* TVSeasonsTableViewController.swift */; };
+		B12F64B21D44CA1300BF97B1 /* SeasonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64B11D44CA1300BF97B1 /* SeasonTableViewCell.swift */; };
+		B12F64B41D44F54200BF97B1 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64B31D44F54200BF97B1 /* EpisodesTableViewController.swift */; };
+		B12F64B61D44F58800BF97B1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64B51D44F58800BF97B1 /* Episode.swift */; };
+		B12F64B81D44F88700BF97B1 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F64B71D44F88700BF97B1 /* EpisodeTableViewCell.swift */; };
 		B134D7651D15096B00CDA5FD /* ImdbMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D7641D15096B00CDA5FD /* ImdbMovie.swift */; };
 		B134D7671D15099200CDA5FD /* TmdbMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D7661D15099200CDA5FD /* TmdbMovie.swift */; };
 		B134D7691D1C7C1800CDA5FD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D7681D1C7C1800CDA5FD /* Character.swift */; };
@@ -20,7 +26,6 @@
 		B134D7731D34187300CDA5FD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134D7721D34187300CDA5FD /* Reachability.swift */; };
 		B14AC2121CE5B50A006FDEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14AC2101CE5B50A006FDEEE /* Main.storyboard */; };
 		B16564CA1CF35AD000ADAF4D /* VideosInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16564C91CF35AD000ADAF4D /* VideosInfoTableViewController.swift */; };
-		B17BDB0E1D3E63B40057397D /* ImageCachingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BDB0D1D3E63B40057397D /* ImageCachingOperation.swift */; };
 		B18462D11CDC613A004B02B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18462D01CDC613A004B02B1 /* AppDelegate.swift */; };
 		B18462D91CDC613A004B02B1 /* TheMovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B18462D71CDC613A004B02B1 /* TheMovieDB.xcdatamodeld */; };
 		B18462DE1CDC613A004B02B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18462DC1CDC613A004B02B1 /* LaunchScreen.storyboard */; };
@@ -41,6 +46,12 @@
 		A432E07E9579F81A91E9621C /* Pods-TheMovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieDB/Pods-TheMovieDB.release.xcconfig"; sourceTree = "<group>"; };
 		B116C4121D3A810F0001B616 /* TableVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVCExtension.swift; sourceTree = "<group>"; };
 		B11F15521D3D5A4F00B0487F /* TmdbTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TmdbTV.swift; sourceTree = "<group>"; };
+		B12F64AD1D449E1A00BF97B1 /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		B12F64AF1D44C96500BF97B1 /* TVSeasonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSeasonsTableViewController.swift; sourceTree = "<group>"; };
+		B12F64B11D44CA1300BF97B1 /* SeasonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTableViewCell.swift; sourceTree = "<group>"; };
+		B12F64B31D44F54200BF97B1 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		B12F64B51D44F58800BF97B1 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		B12F64B71D44F88700BF97B1 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		B134D7641D15096B00CDA5FD /* ImdbMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImdbMovie.swift; sourceTree = "<group>"; };
 		B134D7661D15099200CDA5FD /* TmdbMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TmdbMovie.swift; sourceTree = "<group>"; };
 		B134D7681D1C7C1800CDA5FD /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -52,7 +63,6 @@
 		B14AC2111CE5B50A006FDEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B14AC2131CE60217006FDEEE /* TheMovieDB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheMovieDB-Bridging-Header.h"; sourceTree = "<group>"; };
 		B16564C91CF35AD000ADAF4D /* VideosInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosInfoTableViewController.swift; sourceTree = "<group>"; };
-		B17BDB0D1D3E63B40057397D /* ImageCachingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCachingOperation.swift; sourceTree = "<group>"; };
 		B18462CD1CDC613A004B02B1 /* TheMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18462D01CDC613A004B02B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18462D81CDC613A004B02B1 /* TheMovieDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheMovieDB.xcdatamodel; sourceTree = "<group>"; };
@@ -147,6 +157,8 @@
 				B16564C91CF35AD000ADAF4D /* VideosInfoTableViewController.swift */,
 				B134D76A1D29A25200CDA5FD /* ActorTableViewController.swift */,
 				B134D7701D2ED81400CDA5FD /* ActorDetailTableViewController.swift */,
+				B12F64AF1D44C96500BF97B1 /* TVSeasonsTableViewController.swift */,
+				B12F64B31D44F54200BF97B1 /* EpisodesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +169,8 @@
 				B18462EC1CDDDF98004B02B1 /* MovieTableViewCell.swift */,
 				B1A2C5E31CE233A0009BAF79 /* CollectionViewCell.swift */,
 				B134D76C1D29A2E900CDA5FD /* ActorTableViewCell.swift */,
+				B12F64B11D44CA1300BF97B1 /* SeasonTableViewCell.swift */,
+				B12F64B71D44F88700BF97B1 /* EpisodeTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -172,7 +186,8 @@
 				B134D76E1D2B616700CDA5FD /* CellSelectorProtocol.swift */,
 				B116C4121D3A810F0001B616 /* TableVCExtension.swift */,
 				B11F15521D3D5A4F00B0487F /* TmdbTV.swift */,
-				B17BDB0D1D3E63B40057397D /* ImageCachingOperation.swift */,
+				B12F64AD1D449E1A00BF97B1 /* Season.swift */,
+				B12F64B51D44F58800BF97B1 /* Episode.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -343,19 +358,24 @@
 				B134D7711D2ED81400CDA5FD /* ActorDetailTableViewController.swift in Sources */,
 				B18462D91CDC613A004B02B1 /* TheMovieDB.xcdatamodeld in Sources */,
 				B1A2C5DC1CE0E097009BAF79 /* WebAPIDelegate.swift in Sources */,
+				B12F64B61D44F58800BF97B1 /* Episode.swift in Sources */,
 				B134D7691D1C7C1800CDA5FD /* Character.swift in Sources */,
 				B1A2C5E01CE0E610009BAF79 /* WebFactory.swift in Sources */,
 				B116C4131D3A810F0001B616 /* TableVCExtension.swift in Sources */,
 				B16564CA1CF35AD000ADAF4D /* VideosInfoTableViewController.swift in Sources */,
 				B18462F11CDDEA35004B02B1 /* IMDB.swift in Sources */,
 				B18462D11CDC613A004B02B1 /* AppDelegate.swift in Sources */,
-				B17BDB0E1D3E63B40057397D /* ImageCachingOperation.swift in Sources */,
 				B134D7731D34187300CDA5FD /* Reachability.swift in Sources */,
+				B12F64B81D44F88700BF97B1 /* EpisodeTableViewCell.swift in Sources */,
+				B12F64AE1D449E1A00BF97B1 /* Season.swift in Sources */,
+				B12F64B01D44C96500BF97B1 /* TVSeasonsTableViewController.swift in Sources */,
 				B18462EB1CDDDBC2004B02B1 /* SearchTableViewController.swift in Sources */,
 				B11F15531D3D5A4F00B0487F /* TmdbTV.swift in Sources */,
+				B12F64B21D44CA1300BF97B1 /* SeasonTableViewCell.swift in Sources */,
 				B134D76B1D29A25200CDA5FD /* ActorTableViewController.swift in Sources */,
 				B134D7671D15099200CDA5FD /* TmdbMovie.swift in Sources */,
 				B18462F31CDDECD9004B02B1 /* Video.swift in Sources */,
+				B12F64B41D44F54200BF97B1 /* EpisodesTableViewController.swift in Sources */,
 				B134D76F1D2B616700CDA5FD /* CellSelectorProtocol.swift in Sources */,
 				B18462EF1CDDDFE5004B02B1 /* Constants.swift in Sources */,
 			);

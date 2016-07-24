@@ -59,17 +59,26 @@ class VideosInfoTableViewController: UITableViewController {
         
     //MARK: - Table view methods
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 2 {
-            WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, completionHandler: loadVideoInfo)
+        if indexPath.section == Section.Movie.rawValue{
+
+            if indexPath.row == Row.Cast.rawValue {
+                WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, videoType: (video?.videoType)!, completionHandler: loadVideoInfo)
+             }
         }
+        else{
+            
+            guard let tv = video as? TmdbTV else {return}
+            loadSeasonInfo(tv)
+        }
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
+        if section == Section.Movie.rawValue{
             return 4
         }
         else{
-            if video?.videoType == VideoType.TV{
+            if video?.videoType == VideoType.TV && (video as! TmdbTV).seasons != nil {
                 return 1
             }
             else{
@@ -119,6 +128,7 @@ class VideosInfoTableViewController: UITableViewController {
     }
     
     private func loadActors(actors: [Character]?){
+        video?.actors = actors
         actorsTextView.text.removeAll()
         var actorList: String = ""
         if let actors = actors{
@@ -195,7 +205,35 @@ class VideosInfoTableViewController: UITableViewController {
         
         
     }
-
+   
+    func loadSeasonInfo(tv: TmdbTV)
+    {
+        
+        if let seasonTVController = storyboard?.instantiateViewControllerWithIdentifier("SeasonList") as? TVSeasonsTableViewController {
+            seasonTVController.tv = tv
+            navigationController?.pushViewController(seasonTVController, animated: true)
+        }
+        
+        
+        
+    }
     
 }
+
+enum Row: Int {
+    case Poster = 0
+    case Director = 1
+    case Cast = 2
+    case Plot = 3
+}
+
+enum Section: Int {
+    case Movie = 0
+    case TV = 1
+    
+}
+
+
+
+
 

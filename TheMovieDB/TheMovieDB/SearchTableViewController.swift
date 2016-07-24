@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import AlamofireNetworkActivityIndicator
 
 class SearchTableViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate {
 
@@ -25,7 +26,6 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     var webAPI: WebAPIDelegate?
     var movies: [Video]?
     var pageIndex: Int = 0
-    var imageCache = [String:UIImage]()
     private var lastVideoCount: Int = 0;
     private var resultPerRequest:Int?
     
@@ -49,6 +49,8 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+        NetworkActivityIndicatorManager.sharedManager.startDelay = 0.1
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to sort")
@@ -68,7 +70,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         pageIndex = 1
         
         if movies?.count > 0{
-           // updateImageCache()
+        
             sortVideos()
         }
         
@@ -77,21 +79,6 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-//    func updateImageCache(){
-//        for video in movies! {
-//            print(video.id)
-//            let keyExists = imageCache[video.id] != nil
-//            if keyExists == false{
-//                let imageView = UIImageView()
-//                let URL = NSURL(string: video.posterURL!)!
-//               // imageView.af_imageDownloader?.downloadImage(URLRequest: URL, completion: <#T##CompletionHandler?##CompletionHandler?##Response<Image, NSError> -> Void#>)(URL)
-//                imageView.af_setImageWithURL(URL)
-//                imageCache[video.id] = imageView
-////                
-////                
-//            }
-//        }
-//    }
     
     func tableViewTapped(tap:UITapGestureRecognizer)
     {
@@ -154,48 +141,38 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
     }
 
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let movieCell = tableView.dequeueReusableCellWithIdentifier(Constants.MOVIES_TABLE_VIEW_CELL_INDENTIFIER, forIndexPath: indexPath) as! MovieTableViewCell
-        
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+       
+        guard let movieCell = cell as? MovieTableViewCell else {return}
         
         let movie = movies![indexPath.row]
-        
         movieCell.titleLabel?.text = movie.title
         movieCell.yearLabel?.text = movie.releaseDate
         movieCell.ratingLabel?.text = movie.rating
-        if movie.posterURL == "N/A"{
-             movieCell.posterImage.image = UIImage(named: "no_image")
+        print("title - " + movie.title)
+        print("image - " + movie.lowResPosterURL!)
+
+        if movie.lowResPosterURL == "N/A"{
+            movieCell.posterImage.image = UIImage(named: "no_image")
         }
         else{
-          
-            
-            if let imageView = imageCache[movie.id]{
-                movieCell.posterImage.image = imageView
-            }
-            else
-            {
-                let URL = NSURL(string: movie.posterURL!)!
-                movieCell.posterImage.af_setImageWithURL(URL)
-                imageCache[movie.id] = movieCell.posterImage.image
-            }
-
+            let URL = NSURL(string: movie.lowResPosterURL!)!
+            movieCell.posterImage.af_setImageWithURL(URL)
         }
+
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let movieCell = tableView.dequeueReusableCellWithIdentifier(Constants.MOVIES_TABLE_VIEW_CELL_INDENTIFIER, forIndexPath: indexPath) as! MovieTableViewCell
         
-        
-        
-        if (indexPath.row == (movies?.count)! - 5){
-        //    var pageIndex = (movies?.count)! / self.resultPerRequest! + 1
-          //  if (pageIndex < 1){
-           //     pageIndex = 2
-            //}
+        if (indexPath.row == (movies?.count)! - 10){
             if movies?.count > lastVideoCount{
                 lastVideoCount = (movies?.count)!
                 pageIndex += 1
                 webAPI?.fetchMovies(searchBar.text!,pageIndex: pageIndex, completionHandler: reloadData)
             }
         }
-        // Configure the cell...
-
+    
         return movieCell
     }
     

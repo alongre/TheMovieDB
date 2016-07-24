@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
+class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     
     //MARK: Outlets
@@ -32,10 +32,7 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-               
-        
-        
+                
         
         
         webAPI = WebFactory.getWebAPI(WebAPI.TMDB)
@@ -118,7 +115,8 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
     @IBAction func segmentControlModified(sender: UISegmentedControl)
     {
         self.movies?.removeAll()
-
+        pageIndex = 1
+        lastVideoCount = 0
         fetchMovies()
     }
     
@@ -130,28 +128,29 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate, UICollect
         return (movies?.count)!
     }
     
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        guard let movieCell = cell as? CollectionViewCell else {return}
+        let movie = movies![indexPath.row]
+        let URL = NSURL(string: movie.lowResPosterURL!)!
+        movieCell.posterImage.af_setImageWithURL(URL)
+    }
+    
+    
+    
+    
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         
         let movieCell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath: indexPath) as! CollectionViewCell
-        let movie = movies![indexPath.row]
-         let URL = NSURL(string: movie.posterURL!)!
-        movieCell.posterImage.af_setImageWithURL(URL)
-        print("row: \(indexPath.row)")
-        if (indexPath.row == (movies?.count)! - 5){
+                
+        print(indexPath.row)
+        if (indexPath.row > (movies?.count)! - 10){
             
             if movies?.count > lastVideoCount{
                 lastVideoCount = (movies?.count)!
                 pageIndex = pageIndex + 1
                 fetchMovies(pageIndex)
             }
-            
-       //     var pageIndex = (movies?.count)! / self.resultPerRequest! + 1
-         //   if (pageIndex < 1){
-            //    pageIndex = 2
-          //  }
-     
-            
         }
         return movieCell
         

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireNetworkActivityIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TheMovieDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>228FFC4E78F899B58C33C57F31513A8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60FB979EEC21CC04AE975124BB938790</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74ACEAFB9D006E82D43E52B95900A751</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6E8BB9A162BD6808B00DF73005CE9AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F735FFD4DB5CA546FD353C6CD1F1CD55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8C87C1856D8DB1373DBB942D75113B0</key>
+		<key>9C6E639381A21047F01AA59C9EFC3EF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

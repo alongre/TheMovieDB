@@ -94,6 +94,38 @@ class TMDB: WebAPIDelegate{
     }
 
     
+
+    
+    func fetchTVEpisodes(id:String, season:Int, completionHandler: ([Episode]) -> Void){
+        
+        
+        
+        let url = NSURL(string: Constants.TMDB_TV_WITH_ID_API + "/\(id)" + "/season" + "/\(season)")
+
+        
+        let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY,
+                                                "append_to_response":"credits"]
+        
+        Alamofire.request(
+            .GET,
+            url!,
+            parameters: paramDictionary,
+            encoding: .URL)
+            .validate()
+            .responseJSON { (response) -> Void in
+                guard response.result.isSuccess else {
+                    print("Error while fetching movies: \(response.result.error)")
+                    return
+                }
+                completionHandler(self.dataToEpisodes(response.data))
+                
+        }
+        
+
+        
+        
+    }
+    
     func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
         
         var index = 1
@@ -120,10 +152,11 @@ class TMDB: WebAPIDelegate{
                 
         }
         
-
+        
         
         
     }
+    
     func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
         var index = 1
         if let pageIndex = pageIndex {
@@ -153,13 +186,19 @@ class TMDB: WebAPIDelegate{
     
     
     
-    func fetchCastList(id: String, completionHandler: ([Character]) -> Void){
-        let url = NSURL(string: Constants.TMDB_MOVIE_WITH_ID_API + "/\(id)" + "/credits")
+    func fetchCastList(id: String, videoType: VideoType, completionHandler: ([Character]) -> Void){
+        var url: NSURL
+        if videoType == VideoType.Movie {
+            url = NSURL(string: Constants.TMDB_MOVIE_WITH_ID_API + "/\(id)" + "/credits")!
+        }
+        else{
+             url = NSURL(string: Constants.TMDB_TV_WITH_ID_API + "/\(id)" + "/credits")!
+        }
         let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY]
         
         Alamofire.request(
             .GET,
-            url!,
+            url,
             parameters: paramDictionary,
             encoding: .URL)
             .validate()
@@ -269,19 +308,10 @@ class TMDB: WebAPIDelegate{
             let movie = TmdbMovie(title: title, id: id, imdbID: "")
             
             movie.releaseDate = subJson["release_date"].stringValue
-          //  movie.posterURL = Constants.TMDB_IMAGE_API + subJson["poster_path"].stringValue
-            
-            if (subJson["poster_path"].null == nil){
-                movie.posterURL = Constants.TMDB_LARGE_IMAGE_API + subJson["poster_path"].stringValue
-            }
-            else
-            {
-                movie.posterURL  = "N/A"
-            }
-
+            movie.posterURL = subJson["poster_path"].stringValue
             
             
-            print(movie)
+            
             movies.append(movie)
         }
         
@@ -300,22 +330,8 @@ class TMDB: WebAPIDelegate{
             let movie = TmdbMovie(title: title, id: id, imdbID: "")
             
             movie.releaseDate = subJson["release_date"].stringValue
-           // movie.posterURL = Constants.TMDB_IMAGE_API + subJson["poster_path"].stringValue
-            
-            
-            
-            if (subJson["poster_path"].null == nil){
-                movie.posterURL = Constants.TMDB_LARGE_IMAGE_API + subJson["poster_path"].stringValue
-            }
-            else
-            {
-                movie.posterURL  = "N/A"
-            }
-
-            
-            
+            movie.posterURL = subJson["poster_path"].stringValue
             movie.rating = subJson["vote_average"].stringValue
-            print(movie)
             movies.append(movie)
         }
         
@@ -331,21 +347,8 @@ class TMDB: WebAPIDelegate{
             let title = subJson["name"].stringValue
             let id = subJson["id"].stringValue
             let movie = TmdbMovie(title: title, id: id, imdbID: "")
-            
             movie.releaseDate = subJson["first_air_date"].stringValue
-        
-            
-            
-            if (subJson["poster_path"].null == nil){
-                movie.posterURL = Constants.TMDB_LARGE_IMAGE_API + subJson["poster_path"].stringValue
-            }
-            else
-            {
-                movie.posterURL  = "N/A"
-            }
-            
-          //  movie.rating = subJson["vote_average"].stringValue
-            print(movie)
+            movie.posterURL = subJson["poster_path"].stringValue
             movies.append(movie)
         }
         
@@ -371,7 +374,6 @@ class TMDB: WebAPIDelegate{
         for gen in genres {
                movie.genre?.append(gen.1["name"].stringValue)
         }
-        print(movie)
         return movie
         
      
@@ -386,16 +388,8 @@ class TMDB: WebAPIDelegate{
         let imdbID = ids["imdb_id"].stringValue
         let tv = TmdbTV(title: title, id: id,imdbID: imdbID)
         
-               
+          tv.posterURL = json["poster_path"].stringValue
         
-        if (json["poster_path"].null == nil){
-            tv.posterURL = Constants.TMDB_LARGE_IMAGE_API + json["poster_path"].stringValue
-        }
-        else
-        {
-            tv.posterURL  = "N/A"
-        }
-
         
         
         tv.plot = json["overview"].stringValue
@@ -413,12 +407,90 @@ class TMDB: WebAPIDelegate{
         for gen in genres {
             tv.genre?.append(gen.1["name"].stringValue)
         }
-        print(tv)
+        
+        
+        let seasons = json["seasons"]
+        
+        for (_,subJson):(String, JSON) in seasons {
+            let seasonId = subJson["id"].stringValue
+            let air_date = subJson["air_date"].stringValue
+            let episode_count = subJson["episode_count"].intValue
+            let poster_path = subJson["poster_path"].stringValue
+            let season_number = subJson["season_number"].intValue
+
+            let season = Season(id: seasonId, tvID: tv.id, title: tv.title)
+            season.air_date = air_date
+            season.episode_count = episode_count
+            season.season_number = season_number
+            season.posterURL = poster_path
+            print(season.description)
+            tv.seasons?.append(season)
+        }
+        
         return tv
         
         
     }
 
+    
+    func dataToEpisodes(data: NSData?) -> [Episode]{
+        
+        
+        
+        let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        var episodesList = [Episode]()
+        let episodes = json["episodes"]
+        for (_,subJson):(String, JSON) in episodes {
+            let id = subJson["id"].stringValue
+            let airDate = subJson["air_date"].stringValue
+            let name = subJson["name"].stringValue
+            let episode_number = subJson["episode_number"].intValue
+            let plot = subJson["overview"].stringValue
+            let posterURL = subJson["still_path"].stringValue
+            let season_number = subJson["season_number"].intValue
+            
+            let episode = Episode(id: id, title: name)
+            episode.air_date = airDate
+            episode.episode_number = episode_number
+            episode.posterURL = posterURL
+            episode.season_number = season_number
+            episode.plot = plot
+            
+           // var actorsList = [Character]()
+//            if subJson["guest_stars"].exists(){
+//
+//                let guest_stars = subJson["guest_stars"]
+//                for (_,subJson):(String, JSON) in guest_stars {
+//                    let actorID = subJson["id"].stringValue
+//                    let actorName = subJson["name"].stringValue
+//                    let characterName = subJson["character"].stringValue
+//                    let actorPoster = subJson["profile_path"].stringValue
+//                    
+//                    let actor = Character(name: actorName)
+//                    actor.JobPosition = Job.ACTOR
+//                    actor.CharacterName = characterName
+//                    actor.posterURL = actorPoster
+//                    actor.ID = actorID
+//                    
+//                    actorsList.append(actor)
+//                    
+//                }
+//                
+//            
+//            }
+//            
+          //  episode.actors = actorsList
+            episodesList.append(episode)
+            
+            
+        }
+        return episodesList
+        
+
+        
+        
+    }
     
     func dataToCharacterList(data: NSData?) -> [Character]{
         
@@ -449,8 +521,7 @@ class TMDB: WebAPIDelegate{
             print(actorsList)
         }
         return actorsList
-
+        
     }
-
     
 }

@@ -112,6 +112,8 @@ class IMDB: WebAPIDelegate{
     func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void){
         
     }
+    func fetchTVEpisodes(id:String, season:Int, completionHandler: ([Episode]) -> Void){
+    }
     
     func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
         
@@ -198,7 +200,8 @@ class IMDB: WebAPIDelegate{
     }
 
     
-    func fetchCastList(id: String, completionHandler: ([Character]) -> Void){
+    func fetchCastList(id: String,videoType: VideoType, completionHandler: ([Character]) -> Void)
+    {
         
     }
 

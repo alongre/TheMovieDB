@@ -14,10 +14,12 @@ protocol WebAPIDelegate {
     func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void)
     func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void)
     func fetchDetailedVideoInfo(id:String,completionHandler: (Video) -> Void)
-    func fetchCastList(id: String, completionHandler: ([Character]) -> Void)
+    func fetchCastList(id: String,videoType: VideoType, completionHandler: ([Character]) -> Void)
     func fetchPersonDetail(id: String, completionHandler: (Character) -> Void)
     func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void)
     func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void)
+    func fetchTVEpisodes(id:String, season:Int, completionHandler: ([Episode]) -> Void)
+
 
     
     

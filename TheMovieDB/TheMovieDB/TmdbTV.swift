@@ -18,10 +18,10 @@ class TmdbTV: Video{
     private var _numberOfSeason:Int?
     private var _numberOfEpisodes:Int?
     private var _imdbID: String
-
+    var seasons: [Season]?
   
     
-    //MARK: Computed Properties
+  
     
     
     
@@ -57,17 +57,22 @@ class TmdbTV: Video{
             return _endDate
         }
         set{
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            dateFormatter.lenient = true
-            let date = dateFormatter.dateFromString(newValue!)
-            
-            if let date = date {
-                let calendar = NSCalendar.currentCalendar()
-                let components = calendar.components([.Day , .Month , .Year], fromDate: date)
-                print(components.year)
-                _endDate = String(components.year)
+            if newValue != nil{
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                dateFormatter.lenient = true
+                let date = dateFormatter.dateFromString(newValue!)
                 
+                if let date = date {
+                    let calendar = NSCalendar.currentCalendar()
+                    let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+                    print(components.year)
+                    _endDate = String(components.year)
+                    
+                }
+            }
+            else{
+                _endDate = newValue
             }
             
         }
@@ -103,6 +108,7 @@ class TmdbTV: Video{
         _imdbID = imdbID
         super.init(title: title, id: id)
         videoType = VideoType.TV
+        seasons = [Season]()
     }
     
     override var description: String{

@@ -20,7 +20,24 @@ class Video {
     private var _genre: [String]?
     private var _rating: String?
     private var _voters: String?
-    private var _posterURL: String?
+    private var _lowResPosterURL: String?
+    private var _posterURL: String?{
+        didSet{
+            if (_posterURL == nil || _posterURL?.isEmpty == true){
+                _posterURL = "N/A"
+                _lowResPosterURL = "N/A"
+            }
+            else{
+                let poster = _posterURL!
+                if _posterURL?.containsString(Constants.TMDB_LARGE_IMAGE_API) == false{
+                    _posterURL = Constants.TMDB_LARGE_IMAGE_API + poster
+                    _lowResPosterURL =  Constants.TMDB_IMAGE_API + poster
+                }
+            }
+        }
+    }
+    
+
     private var _releaseDate: String?
     private var _videoType: VideoType
      
@@ -32,6 +49,9 @@ class Video {
     var title: String {
         get{
             return _title
+        }
+        set{
+            _title = newValue
         }
     }
     
@@ -55,9 +75,11 @@ class Video {
     
     var runtime: String? {
         get{
+            
             return "\(_runtime!) min"
         }
         set{
+            
             _runtime = newValue
         }
     }
@@ -129,6 +151,13 @@ class Video {
             _posterURL = newValue
         }
     }
+    
+    var lowResPosterURL: String? {
+        get{
+            return _lowResPosterURL
+        }
+    }
+
     
     var videoType: VideoType {
         get{

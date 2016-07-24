@@ -49,9 +49,10 @@ class ActorTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ActorCell", forIndexPath: indexPath) as! ActorTableViewCell
-
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+      
+        guard let cell = cell as? ActorTableViewCell else {return}
+        
         let actor = actors![indexPath.row]
         cell.actorName.text = actor.Name
         cell.characterName.text = actor.CharacterName
@@ -63,8 +64,14 @@ class ActorTableViewController: UITableViewController {
         {
             let URL = NSURL(string: actor.posterURL!)!
             cell.actorPoster.af_setImageWithURL(URL)
-           // cell.actorPoster.sd_setImageWithURL(URL)
+            
         }
+
+    }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ActorCell", forIndexPath: indexPath) as! ActorTableViewCell
         return cell
     }
     

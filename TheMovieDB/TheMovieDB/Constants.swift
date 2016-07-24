@@ -18,7 +18,7 @@ struct Constants{
 
     
     static let TMDB_FIND_API = "https://api.themoviedb.org/3/find"
-        static let TMDB_MOVIE_TOP_RATED_API = "https://api.themoviedb.org/3/movie/top_rated"
+    static let TMDB_MOVIE_TOP_RATED_API = "https://api.themoviedb.org/3/movie/top_rated"
     static let TMDB_MOVIE_POPULAR_API = "https://api.themoviedb.org/3/movie/popular"
     static let TMDB_MOVIE_UPCOMING_API = "https://api.themoviedb.org/3/movie/upcoming"
     static let TMDB_MOVIE_NOW_PLAYING_API = "https://api.themoviedb.org/3/movie/now_playing"
@@ -26,7 +26,7 @@ struct Constants{
     
     
     static let TMDB_KEY = "d8e3e7151a94fe7ff73e52f12b6a7456"
-     static let TMDB_IMAGE_API = "http://image.tmdb.org/t/p/w90/"
+     static let TMDB_IMAGE_API = "http://image.tmdb.org/t/p/w154/"
      static let TMDB_LARGE_IMAGE_API = "http://image.tmdb.org/t/p/w500/"
     
     
