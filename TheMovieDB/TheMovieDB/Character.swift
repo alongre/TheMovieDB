@@ -16,12 +16,30 @@ class Character{
     private var _name: String
     private var _characterName: String?
     private var _id: String?
-    private var _posterURL: String?
+    private var _lowResPosterURL: String?
     private var _job: Job?
     private var _birthday: String?
     private var _birthPlace: String?
     private var _deathDay: String?
     private var _biography: String?
+    private var _posterURL: String?{
+        didSet{
+            if (_posterURL == nil || _posterURL?.isEmpty == true){
+                _posterURL = "N/A"
+                _lowResPosterURL = "N/A"
+            }
+            else{
+                let poster = _posterURL!
+                if _posterURL?.containsString(Constants.TMDB_LARGE_IMAGE_API) == false{
+                    _posterURL = Constants.TMDB_LARGE_IMAGE_API + poster
+                    _lowResPosterURL =  Constants.TMDB_IMAGE_API + poster
+                }
+            }
+        }
+    }
+
+    
+    
     
     //MARK: - Constructor
     init(name: String){
@@ -88,6 +106,11 @@ class Character{
         }
         set{
             _posterURL = newValue
+        }
+    }
+    var lowResPosterURL: String? {
+        get{
+            return _lowResPosterURL
         }
     }
     var ID: String? {

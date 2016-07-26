@@ -57,7 +57,7 @@ class EpisodesTableViewController: UITableViewController {
         guard let cell = cell as? EpisodeTableViewCell else {return}
         let episode = episodes![indexPath.row]
         
-        cell.airDateLabel.text = String(episode.air_date!)
+        cell.airDateLabel.text = String(episode.releaseDate!)
         cell.episodeNameLabel.text = String(episode.title)
         cell.episodeNumberLabel.text = String(episode.episode_number!)
         
@@ -84,7 +84,7 @@ class EpisodesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let episode = episodes![indexPath.row]
         tableView.allowsSelection = false
-        loadEpisodeInfo(episode)
+         WebFactory.getWebAPI(WebAPI.TMDB).fetchTVEpisode((tv?.id)!, season: episode.season_number!, episode: episode.episode_number!, completionHandler: loadEpisodeInfo)
         
     }
     
@@ -94,28 +94,9 @@ class EpisodesTableViewController: UITableViewController {
     {
         
         if let videoDetailVC = storyboard?.instantiateViewControllerWithIdentifier("VideoInfo") as? VideosInfoTableViewController {
-            //let video = TmdbMovie(title: episode.title, id: tv!.id, imdbID: tv!.imdbID)
-            tv!.plot = episode.plot
-            tv!.title = episode.title
-            tv!.posterURL = episode.posterURL
-          //  video.plot = episode.plot
-            tv!.releaseDate = episode.air_date
-            tv!.endDate = nil
-            //tv!.seasons = nil
-         //   video.videoType = VideoType.TV
-         //   var actors = tv?.actors
-//            for actor in episode.actors! {
-//                actors!.append(actor)
-//            }
-          //  video.actors = actors
-    
-         //   video.releaseDate = episode.air_date
-        //  video.runtime = tv?.runtime?.stringByReplacingOccurrencesOfString("min", withString: "")
-           
-        
-            
-            videoDetailVC.video = tv
-            tableView.allowsSelection = false
+            episode.runtime = tv?.runtime?.stringByReplacingOccurrencesOfString("min", withString: "")
+            videoDetailVC.video = episode
+            tableView.allowsSelection = true
             navigationController?.pushViewController(videoDetailVC, animated: true)
         }
         

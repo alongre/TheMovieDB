@@ -188,5 +188,6 @@ class Video {
 enum VideoType{
     case Movie
     case TV
+    case Episode
 }
 

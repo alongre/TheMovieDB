@@ -84,7 +84,7 @@ class IMDB: WebAPIDelegate{
         
     }
 
-    func fetchDetailedVideoInfo(id:String,completionHandler: (Video) -> Void){
+    func fetchDetailedMovieInfo(id:String,completionHandler: (Video) -> Void){
         
         
         let url = NSURL(string: Constants.IMDB_API)
@@ -109,6 +109,9 @@ class IMDB: WebAPIDelegate{
         
     }
 
+    func fetchTVEpisode(id:String, season:Int, episode: Int, completionHandler: (Episode) -> Void){
+        
+    }
     func fetchDetailedTVInfo(id:String,completionHandler: (Video) -> Void){
         
     }

@@ -371,7 +371,7 @@
                                                                 <constraint firstAttribute="height" constant="32" id="Fl0-Nr-fHj"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="N/A" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-dn-AA8">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="N/A" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-dn-AA8">
                                                             <rect key="frame" x="37" y="0.0" width="547" height="51"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -411,7 +411,7 @@
                                                                 <constraint firstAttribute="width" constant="32" id="r6O-eY-Fel"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="N/A" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-Rm-ZAw">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="N/A" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-Rm-ZAw">
                                                             <rect key="frame" x="37" y="0.0" width="514" height="53"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

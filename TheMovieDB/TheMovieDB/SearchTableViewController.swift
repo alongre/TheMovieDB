@@ -181,7 +181,7 @@ class SearchTableViewController: UIViewController, UITableViewDelegate,UITableVi
         let movie = movies![indexPath.row] as Video
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            webAPI?.fetchDetailedVideoInfo(movie.id, completionHandler: loadVideoInfo)
+            webAPI?.fetchDetailedMovieInfo(movie.id, completionHandler: loadVideoInfo)
         case 1:
             webAPI?.fetchDetailedTVInfo(movie.id, completionHandler: loadVideoInfo)
 

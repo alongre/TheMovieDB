@@ -49,6 +49,8 @@ class VideosInfoTableViewController: UITableViewController {
       override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         plotTextView.setContentOffset(CGPointZero, animated: false)
+        actorsTextView.setContentOffset(CGPointZero, animated: false)
+
     }
     
    
@@ -61,9 +63,16 @@ class VideosInfoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == Section.Movie.rawValue{
 
-            if indexPath.row == Row.Cast.rawValue {
-                WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, videoType: (video?.videoType)!, completionHandler: loadVideoInfo)
-             }
+            if video?.actors != nil{
+                loadActorsInfo((video?.actors)!)
+            }
+//            else{
+//                
+//            
+//                if indexPath.row == Row.Cast.rawValue {
+//                    WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, videoType: (video?.videoType)!, completionHandler: loadActorsInfo)
+//                }
+//            }
         }
         else{
             
@@ -78,7 +87,7 @@ class VideosInfoTableViewController: UITableViewController {
             return 4
         }
         else{
-            if video?.videoType == VideoType.TV && (video as! TmdbTV).seasons != nil {
+            if video?.videoType == VideoType.TV {
                 return 1
             }
             else{
@@ -120,7 +129,9 @@ class VideosInfoTableViewController: UITableViewController {
             if newVideo.videoType == VideoType.TV{
                 tvSeasonsTextView.text = newVideo.description
             }
-
+            loadActors(video!.actors)
+            actorsTextView.scrollRectToVisible(CGRectZero, animated: false)
+ 
             
         }
         
@@ -159,6 +170,9 @@ class VideosInfoTableViewController: UITableViewController {
     
     private func loadDataFromIMDB(){
         
+        if video?.videoType == VideoType.Episode{
+            return
+        }
         var imdbID: String
         if video?.videoType == VideoType.Movie{
             imdbID = (video as! TmdbMovie).imdbID
@@ -170,7 +184,7 @@ class VideosInfoTableViewController: UITableViewController {
     
         
             if imdbID.characters.count > 0 {
-                WebFactory.getWebAPI(WebAPI.IMDB).fetchDetailedVideoInfo(imdbID, completionHandler: updateIMDBDetails)
+                WebFactory.getWebAPI(WebAPI.IMDB).fetchDetailedMovieInfo(imdbID, completionHandler: updateIMDBDetails)
                 return
             }
         
@@ -178,13 +192,12 @@ class VideosInfoTableViewController: UITableViewController {
         votersLabel.text = video!.voters
         ratingLabel.text = video!.rating
         directorTextView.text = video!.director
-        loadActors(video!.actors)
-
+       
         
     }
     
     func updateIMDBDetails(video: Video){
-        loadActors(video.actors)
+        
         votersLabel.text = video.voters
         ratingLabel.text = video.rating
         directorTextView.text = video.director
@@ -194,7 +207,7 @@ class VideosInfoTableViewController: UITableViewController {
 
     
     //MARK: - Segue
-    func loadVideoInfo(actors: [Character])
+    func loadActorsInfo(actors: [Character])
     {
         
         if let actorListTVController = storyboard?.instantiateViewControllerWithIdentifier("ActorsList") as? ActorTableViewController {

@@ -170,7 +170,7 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
         if isInternetConnectionAvailable(){
             let movie = movies![indexPath.row]
             collectionView.allowsSelection = false
-            webAPI?.fetchDetailedVideoInfo(movie.id, completionHandler: loadVideoInfo)
+            webAPI?.fetchDetailedMovieInfo(movie.id, completionHandler: loadVideoInfo)
         }
 
         
