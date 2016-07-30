@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class ActorDetailTableViewController: UITableViewController {
 
+    
+    
+    
+    
     
     //MARK - Outlets
     
@@ -24,6 +29,7 @@ class ActorDetailTableViewController: UITableViewController {
     
     //MARK: Properties
 
+    var mangedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var actor: Character?
     var movies: [Video]?
     
@@ -39,12 +45,24 @@ class ActorDetailTableViewController: UITableViewController {
 
         posterImage.userInteractionEnabled = true
         posterImage.addGestureRecognizer(tapGestureRecognizer)
+        addToDBButton()
 
         
         
         reloadData()
     }
     
+    
+    
+    func addToDBButton(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self,action:#selector(self.saveVideo(_:)))
+        
+    }
+    
+    func saveVideo(sender: AnyObject)
+    {
+        
+    }
     
     
     

@@ -13,6 +13,7 @@ extension UITableViewController{
     
    
     
+    
     //MARK: - Enlarge image when tapping
 
     func imageTapped(sender: AnyObject)
@@ -43,7 +44,7 @@ extension UITableViewController{
     func dismissFullscreenImage(sender: UITapGestureRecognizer) {
         let view = self.view?.viewWithTag(Constants.LARGE_IMAGE_ID)
         view?.removeFromSuperview()
-        self.navigationItem.rightBarButtonItems?.removeAll()
+        self.navigationItem.rightBarButtonItems?.removeLast()
     }
     
     
@@ -51,10 +52,11 @@ extension UITableViewController{
     
     func addSaveBarButton(){
         let saveBtn = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action:#selector(self.saveImage))
-        self.navigationItem.rightBarButtonItem = saveBtn
-        
+        self.navigationItem.rightBarButtonItems?.append(saveBtn)
     }
     
+    
+   
     
     func saveImage(){
         let view = self.view?.viewWithTag(Constants.LARGE_IMAGE_ID)

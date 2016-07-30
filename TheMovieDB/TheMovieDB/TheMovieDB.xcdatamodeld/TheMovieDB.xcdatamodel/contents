@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Actors" representedClassName=".Actors" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthplace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="character_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="death_day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="low_res_poster_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poster_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="videos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Videos" inverseName="actors" inverseEntity="Videos" syncable="YES"/>
+    </entity>
+    <entity name="Videos" representedClassName=".Videos" syncable="YES">
+        <attribute name="director" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="episode_number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imdb_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="low_res_poster_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number_of_episodes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="number_of_season" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="plot" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poster_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="release_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="season_number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voters" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="actors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Actors" inverseName="videos" inverseEntity="Actors" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Actors" positionX="-36" positionY="-72" width="128" height="208"/>
+        <element name="Videos" positionX="376" positionY="-24" width="128" height="328"/>
+    </elements>
 </model>

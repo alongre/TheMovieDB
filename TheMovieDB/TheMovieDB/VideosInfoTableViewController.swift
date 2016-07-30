@@ -8,12 +8,16 @@
 
 import UIKit
 import AlamofireImage
+import CoreData
 
 class VideosInfoTableViewController: UITableViewController {
 
     
     
     //MARK: - Outlets
+    
+     var mangedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    
     
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -39,10 +43,21 @@ class VideosInfoTableViewController: UITableViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(self.imageTapped(_:)))
         posterImage.userInteractionEnabled = true
         posterImage.addGestureRecognizer(tapGestureRecognizer)
-        
+        addToDBButton()
         
         reloadData()
   }
+    
+    
+    func addToDBButton(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self,action:#selector(self.saveVideo(_:)))
+        
+    }
+    
+    func saveVideo(sender: AnyObject)
+    {
+        
+    }
     
     
     
@@ -94,6 +109,23 @@ class VideosInfoTableViewController: UITableViewController {
                 return 0
             }
         }
+    }
+    
+    
+    
+    
+    //MARK: - Core Date
+    func saveVideo(){
+        
+        mangedObjectContext?.performBlock{
+            _ = Videos.saveVideoInfo(self.video!, inManagedObjectContext: self.mangedObjectContext!)
+            do{
+                try self.mangedObjectContext?.save()
+            } catch let error{
+              print("Core Data Error \(error)")
+            }
+        }
+        
     }
     
     //MARK: - Load data into controller

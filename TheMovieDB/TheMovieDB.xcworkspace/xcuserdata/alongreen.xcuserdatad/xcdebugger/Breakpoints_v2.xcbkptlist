@@ -126,8 +126,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
             endingLineNumber = "100"
-            landmarkName = "VideosInfoTableViewController"
-            landmarkType = "3">
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -286,8 +286,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "reloadData()"
-            landmarkType = "5">
+            landmarkName = "VideosInfoTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,7 +302,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
             endingLineNumber = "195"
-            landmarkName = "loadDataFromIMDB()"
+            landmarkName = "loadGenres()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -350,7 +350,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
             endingLineNumber = "195"
-            landmarkName = "loadDataFromIMDB()"
+            landmarkName = "loadGenres()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -382,7 +382,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
             endingLineNumber = "196"
-            landmarkName = "loadDataFromIMDB()"
+            landmarkName = "loadGenres()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -665,11 +665,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ActorDetailTableViewController.swift"
-            timestampString = "490375809.499282"
+            timestampString = "491601140.511357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -750,7 +750,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -814,7 +814,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "reloadData()"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -830,7 +830,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
             endingLineNumber = "176"
-            landmarkName = "loadDataFromIMDB()"
+            landmarkName = "loadActors(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -846,7 +846,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
             endingLineNumber = "200"
-            landmarkName = "updateIMDBDetails(_:)"
+            landmarkName = "loadGenres()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -862,7 +862,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "reloadData()"
+            landmarkName = "saveVideo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1262,7 +1262,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1470,7 +1470,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
             endingLineNumber = "225"
-            landmarkName = "loadSeasonInfo(_:)"
+            landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -1694,7 +1694,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
             endingLineNumber = "142"
-            landmarkName = "loadActors(_:)"
+            landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1710,7 +1710,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
             endingLineNumber = "213"
-            landmarkName = "loadActorsInfo(_:)"
+            landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -1934,7 +1934,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
             endingLineNumber = "212"
-            landmarkName = "loadActorsInfo(_:)"
+            landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -1982,7 +1982,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
             endingLineNumber = "214"
-            landmarkName = "loadActorsInfo(_:)"
+            landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1998,7 +1998,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "viewDidLayoutSubviews()"
+            landmarkName = "addToDBButton()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
