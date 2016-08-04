@@ -24,8 +24,6 @@ class TVSeasonsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = tv?.title
         tvSeason = tv?.seasons
-       // sort()
-        
     }
     
     
@@ -38,11 +36,11 @@ class TVSeasonsTableViewController: UITableViewController {
     
     
     
-    func sort()
-    {
-        self.tvSeason?.sortInPlace({ $1.air_date > $0.air_date })
-        
-    }
+//    func sort()
+//    {
+//        self.tvSeason?.sortInPlace({ $1.air_date > $0.air_date })
+//        
+//    }
     
     // MARK: - Table view data source
     

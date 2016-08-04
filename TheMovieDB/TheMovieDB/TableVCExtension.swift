@@ -52,6 +52,7 @@ extension UITableViewController{
     
     func addSaveBarButton(){
         let saveBtn = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action:#selector(self.saveImage))
+       // print(self.navigationItem.rightBarButtonItems)
         self.navigationItem.rightBarButtonItems?.append(saveBtn)
     }
     
@@ -64,13 +65,8 @@ extension UITableViewController{
             let imageData = UIImageJPEGRepresentation(posterImage.image!, 0.6)
             let compressedJPGImage = UIImage(data: imageData!)
             UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-            
-            
-            let alertController = UIAlertController(title: "TheMovieDB", message: "Your image has been saved to Photo Library!", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
-            alertController.addAction(okAction)
-            self.presentViewController(alertController, animated: true, completion: nil )
-        }
+            displayMessage("Your image has been saved to Photo Library")
+         }
     }
 
 
@@ -80,5 +76,14 @@ extension UITableViewController{
         if let imageView = view {
             imageView.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: self.view.frame.height)
         }
+    }
+    
+    
+    func displayMessage(message: String){
+        let alertController = UIAlertController(title: "TheMovieDB", message: message, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil )
+
     }
 }

@@ -9,6 +9,6 @@
 import UIKit
 
 
-protocol CellSelectorDelegate {
-    func imageWasTapped(image: UIImageView)
-}
+//protocol CellSelectorDelegate {
+//    func imageWasTapped(image: UIImageView)
+//}

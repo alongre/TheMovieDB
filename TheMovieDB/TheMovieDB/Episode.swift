@@ -53,8 +53,4 @@ class Episode:  Video{
         super.init(title: title, id: id)
         videoType = VideoType.Episode
     }
-//    convenience override init(title: String, id: String) {
-//        self.init(title: title,id: id)
-//        videoType = VideoType.Episode
-//    }
 }

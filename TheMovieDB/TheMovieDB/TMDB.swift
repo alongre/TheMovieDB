@@ -17,7 +17,7 @@ class TMDB: WebAPIDelegate{
     
     //MARK: - WebAPIDelegate methods
     
-    func fetchMovies(movieName: String, pageIndex: Int?,completionHandler: ([Video]) -> Void){
+    func fetchMovies(movieName: String, pageIndex: Int?,completionHandler: (VideosList) -> Void){
         var index = 1
         if let pageIndex = pageIndex {
             index = pageIndex
@@ -98,12 +98,8 @@ class TMDB: WebAPIDelegate{
 
     
     func fetchTVEpisodes(id:String, season:Int, completionHandler: ([Episode]) -> Void){
-        
-        
-        
         let url = NSURL(string: Constants.TMDB_TV_WITH_ID_API + "/\(id)" + "/season" + "/\(season)")
 
-        
         let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY,
                                                 "append_to_response":"credits"]
         
@@ -121,10 +117,7 @@ class TMDB: WebAPIDelegate{
                 completionHandler(self.dataToEpisodes(response.data))
                 
         }
-        
-
-        
-        
+       
     }
     
     func fetchTVEpisode(id:String, season:Int, episode: Int, completionHandler: (Episode) -> Void){
@@ -158,7 +151,7 @@ class TMDB: WebAPIDelegate{
     }
 
     
-    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
+    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: (VideosList) -> Void){
         
         var index = 1
         if let pageIndex = pageIndex {
@@ -189,7 +182,7 @@ class TMDB: WebAPIDelegate{
         
     }
     
-    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
+    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: (VideosList) -> Void){
         var index = 1
         if let pageIndex = pageIndex {
             index = pageIndex
@@ -271,7 +264,7 @@ class TMDB: WebAPIDelegate{
     }
 
     
-    func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void){
+    func fetchPersonMovies(id: String, completionHandler: (VideosList) -> Void){
         let url = NSURL(string: Constants.TMDB_PERSON_DETAILS_API + "/\(id)" + "/movie_credits")
         let paramDictionary: [String:String] = ["api_key":Constants.TMDB_KEY]
         
@@ -313,10 +306,14 @@ class TMDB: WebAPIDelegate{
         return actor
     }
 
-    func dataToMoviesPerActor(data:NSData?) -> [Video] {
-        var movies = [Video]()
+    func dataToMoviesPerActor(data:NSData?) -> VideosList {
+       
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let totalPages = json["total_pages"].intValue
+        let totalResults = json["total_results"].intValue
+        let videoList = VideosList(videos: [Video](),totalPages: totalPages, totalResults: totalResults)
+
         let results = json["cast"]
         for (_,subJson):(String, JSON) in results {
             let title = subJson["title"].stringValue
@@ -328,36 +325,45 @@ class TMDB: WebAPIDelegate{
             
             
             
-            movies.append(movie)
+           videoList.add(movie)
         }
         
-        return movies
+        return videoList
     }
 
     
-    func dataToMovies(data:NSData?) -> [Video] {
-        var movies = [Video]()
+    func dataToMovies(data:NSData?) -> VideosList {
+        
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        let totalPages = json["total_pages"].intValue
+        let totalResults = json["total_results"].intValue
+        let videoList = VideosList(videos: [Video](),totalPages: totalPages, totalResults: totalResults)
         let results = json["results"]
         for (_,subJson):(String, JSON) in results {
             let title = subJson["original_title"].stringValue
             let id = subJson["id"].stringValue
-            let movie = TmdbMovie(title: title, id: id, imdbID: "")
+            let video = TmdbMovie(title: title, id: id, imdbID: "")
             
-            movie.releaseDate = subJson["release_date"].stringValue
-            movie.posterURL = subJson["poster_path"].stringValue
-            movie.rating = subJson["vote_average"].stringValue
-            movies.append(movie)
+            video.releaseDate = subJson["release_date"].stringValue
+            video.posterURL = subJson["poster_path"].stringValue
+            video.rating = subJson["vote_average"].stringValue
+            videoList.add(video)
         }
         
-        return movies
+        return videoList
     }
 
-    func dataToTV(data:NSData?) -> [Video] {
-        var movies = [Video]()
+    func dataToTV(data:NSData?) -> VideosList {
+        
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        let totalPages = json["total_pages"].intValue
+        let totalResults = json["total_results"].intValue
+        let videoList = VideosList(videos: [Video](),totalPages: totalPages, totalResults: totalResults)
+        
         let results = json["results"]
         for (_,subJson):(String, JSON) in results {
             let title = subJson["name"].stringValue
@@ -365,10 +371,10 @@ class TMDB: WebAPIDelegate{
             let movie = TmdbMovie(title: title, id: id, imdbID: "")
             movie.releaseDate = subJson["first_air_date"].stringValue
             movie.posterURL = subJson["poster_path"].stringValue
-            movies.append(movie)
+            videoList.add(movie)
         }
         
-        return movies
+        return videoList
     }
 
     
@@ -411,7 +417,7 @@ class TMDB: WebAPIDelegate{
                 actorsList.append(character)
             
             
-            print(actorsList)
+         //   print(actorsList)
         }
         return actorsList
         
@@ -433,7 +439,7 @@ class TMDB: WebAPIDelegate{
                 actorsList.append(character)
             
             
-            print(actorsList)
+        
         }
         return actorsList
         
@@ -480,7 +486,6 @@ class TMDB: WebAPIDelegate{
             season.episode_count = subJson["episode_count"].intValue
             season.season_number = subJson["season_number"].intValue
             season.posterURL = subJson["poster_path"].stringValue
-            print(season.description)
             tv.seasons?.append(season)
         }
         

@@ -20,28 +20,6 @@ class TmdbMovie: Video{
     
     
     //MARK: Computed Properties
-//    override var releaseDate: String?{
-//        get{
-//            return _releaseDate
-//        }
-//        set{
-//            let dateFormatter = NSDateFormatter()
-//            dateFormatter.dateFormat = "yyyy-MM-dd"
-//            dateFormatter.lenient = true
-//            let date = dateFormatter.dateFromString(newValue!)
-//            
-//            if let date = date {
-//                let calendar = NSCalendar.currentCalendar()
-//                let components = calendar.components([.Day , .Month , .Year], fromDate: date)
-//                print(components.year)
-//                _releaseDate = String(components.year)
-//                
-//            }
-//            
-//        }
-//    }
-    
-    
     override var runtime: String? {
         get{
             return "\(_runtime!) min"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ChartsViewController.reloadData(VideosList) -&gt; ():ChartsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ChartsViewController.scrollViewDidScroll(UIScrollView) -&gt; ():ChartsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ChartsViewController.reloadData([Video]) -&gt; ():ChartsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UIViewAlertForUnsatisfiableConstraints:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "expr ((UIImageView *)0x14ef3f770).backgroundColor = [UIColor redColor]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static == infix(Video, Video) -&gt; Bool:Video.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ChartsViewController.collectionView(UICollectionView, numberOfItemsInSection : Int) -&gt; Int:ChartsViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

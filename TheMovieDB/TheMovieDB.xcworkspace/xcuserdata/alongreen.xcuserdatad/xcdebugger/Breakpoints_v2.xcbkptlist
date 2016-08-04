@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "segmentControlModified(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,28 +104,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "reloadData(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492030686.554527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -137,7 +121,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/IMDB.swift"
-            timestampString = "491173953.921451"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -153,11 +137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "loadVideoInfo(_:)"
             landmarkType = "5">
             <Locations>
@@ -281,11 +265,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492030686.554527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "VideosInfoTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -297,11 +281,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "loadGenres()"
             landmarkType = "5">
             <Locations>
@@ -345,11 +329,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "loadGenres()"
             landmarkType = "5">
          </BreakpointContent>
@@ -361,7 +345,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/IMDB.swift"
-            timestampString = "491173953.921451"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "178"
@@ -377,11 +361,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "loadGenres()"
             landmarkType = "5">
          </BreakpointContent>
@@ -393,11 +377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492030686.554527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "VideosInfoTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -409,11 +393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/IMDB.swift"
-            timestampString = "489240225.355033"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "fetchDetailedMovieInfo(_:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -425,11 +409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -441,11 +425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -457,11 +441,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -473,11 +457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -489,11 +473,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "383"
-            endingLineNumber = "383"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -505,11 +489,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -521,11 +505,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -537,11 +521,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -585,7 +569,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/IMDB.swift"
-            timestampString = "491173953.921451"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
@@ -601,11 +585,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491172549.313225"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "fetchPersonDetail(_:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -617,11 +601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "490975434.301749"
+            timestampString = "491947304.760572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -633,11 +617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "collectionView(_:didSelectItemAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -649,11 +633,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "490975434.301749"
+            timestampString = "491947304.760572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "numberOfSectionsInTableView(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -665,7 +649,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ActorDetailTableViewController.swift"
-            timestampString = "491601140.511357"
+            timestampString = "492031384.585743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -744,136 +728,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "491050771.499145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "491050771.499145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
-            landmarkName = "dataToFullInfoTV(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "loadActors(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "loadGenres()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "saveVideo()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "452"
@@ -888,13 +744,77 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "490975434.301749"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492030686.554527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "loadActors(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "loadGenres()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492030686.554527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "saveVideo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TMDB.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "458"
+            endingLineNumber = "458"
+            landmarkName = "dataToFullInfoTV(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -905,27 +825,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "490975434.301749"
+            timestampString = "491947304.760572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "490975434.301749"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "SearchTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -937,11 +841,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/SearchTableViewController.swift"
-            timestampString = "491050771.499145"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "tableView(_:willDisplayCell:forRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -953,11 +857,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
             landmarkName = "dataToMovies(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -985,91 +889,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TheMovieDB.ChartsViewController.collectionView (__ObjC.UICollectionView, cellForItemAtIndexPath : __ObjC.NSIndexPath) -&gt; __ObjC.UICollectionViewCell"
-                  moduleName = "TheMovieDB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/ChartsViewController.swift"
-                  timestampString = "490712370.625753"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "172"
-                  endingLineNumber = "172"
-                  offsetFromSymbolStart = "328">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TheMovieDB.ChartsViewController.collectionView (__ObjC.UICollectionView, cellForItemAtIndexPath : __ObjC.NSIndexPath) -&gt; __ObjC.UICollectionViewCell"
-                  moduleName = "TheMovieDB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/ChartsViewController.swift"
-                  timestampString = "490712370.626148"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "172"
-                  endingLineNumber = "172"
-                  offsetFromSymbolStart = "1228">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "segmentControlModified(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "fetchMovies(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1080,44 +904,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "dataToMoviesPerActor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1129,11 +921,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
             landmarkName = "dataToMoviesPerActor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1161,11 +953,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/ChartsViewController.swift"
-            timestampString = "491039530.373148"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1177,11 +969,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "476"
-            endingLineNumber = "476"
+            startingLineNumber = "482"
+            endingLineNumber = "482"
             landmarkName = "dataToFullInfoTV(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1193,11 +985,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
             landmarkName = "dataToFullInfoTV(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1209,11 +1001,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "475"
-            endingLineNumber = "475"
+            startingLineNumber = "481"
+            endingLineNumber = "481"
             landmarkName = "dataToFullInfoTV(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1241,11 +1033,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492026806.92929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1257,11 +1049,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492026806.92929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1289,11 +1081,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491057128.202799"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:willDisplayCell:forRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1305,11 +1097,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491057128.202799"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:willDisplayCell:forRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1321,11 +1113,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491057128.202799"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1337,11 +1129,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491057128.202799"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1417,11 +1209,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491057128.202799"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "tableView(_:willDisplayCell:forRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1433,11 +1225,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491063676.152939"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1449,11 +1241,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "495"
-            endingLineNumber = "495"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
             landmarkName = "dataToEpisodes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1465,11 +1257,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
@@ -1513,11 +1305,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491064013.743362"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "loadEpisodesInfo(_:)"
             landmarkType = "5">
             <Locations>
@@ -1561,11 +1353,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "494"
-            endingLineNumber = "494"
+            startingLineNumber = "499"
+            endingLineNumber = "499"
             landmarkName = "dataToEpisodes(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1577,11 +1369,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491172549.313225"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "fetchTVEpisodes(_:season:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1593,11 +1385,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491066660.214199"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "loadEpisodesInfo(_:)"
             landmarkType = "5">
             <Locations>
@@ -1641,11 +1433,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TVSeasonsTableViewController.swift"
-            timestampString = "491066660.730382"
+            timestampString = "492017679.689353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "loadEpisodesInfo(_:)"
             landmarkType = "5">
             <Locations>
@@ -1689,11 +1481,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1705,11 +1497,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
@@ -1753,11 +1545,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491172549.313225"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "fetchCastList(_:videoType:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1769,29 +1561,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "532"
-            endingLineNumber = "532"
+            startingLineNumber = "537"
+            endingLineNumber = "537"
             landmarkName = "dataToCharacterList(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheMovieDB/Episode.swift"
-            timestampString = "491165810.026693"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "Episode"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1849,11 +1625,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "408"
+            endingLineNumber = "408"
             landmarkName = "getActors(_:root:subRoot:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1865,11 +1641,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1881,11 +1657,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "dataToFullInfoMovie(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1897,11 +1673,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/TMDB.swift"
-            timestampString = "491239768.573652"
+            timestampString = "492030435.203328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "474"
-            endingLineNumber = "474"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "dataToFullInfoTV(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1929,11 +1705,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
             <Locations>
@@ -1977,11 +1753,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "loadDataFromIMDB()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1993,12 +1769,593 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491238274.583145"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "reloadData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "reloadData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492030686.554527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "saveVideo(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.saveVideo (Swift.AnyObject) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "491769649.076003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.(saveVideo (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "491769649.076197"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492026806.92929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "updateDBButton()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492026806.92929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "updateDBButton()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "tableView(_:commitEditingStyle:forRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "tableView(_:commitEditingStyle:forRowAtIndexPath:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.CoreDataVideosTableViewController.tableView (__ObjC.UITableView, commitEditingStyle : __C.UITableViewCellEditingStyle, forRowAtIndexPath : __ObjC.NSIndexPath) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/CoreDataVideosTableViewController.swift"
+                  timestampString = "491778550.992741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.CoreDataVideosTableViewController.tableView (__ObjC.UITableView, commitEditingStyle : __C.UITableViewCellEditingStyle, forRowAtIndexPath : __ObjC.NSIndexPath) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/CoreDataVideosTableViewController.swift"
+                  timestampString = "491778550.993069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TMDB.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "dataToMovies(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TMDB.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "fetchMoviesWithURL(_:pageIndex:completionHandler:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "reloadData(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "reloadData(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "collectionView(_:willDisplayCell:forItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "reloadData(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TMDB.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "dataToMovies(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "reloadData(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/ChartsViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/SearchTableViewController.swift"
+            timestampString = "491947304.760572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.SearchTableViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/SearchTableViewController.swift"
+                  timestampString = "491937529.134826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.SearchTableViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/SearchTableViewController.swift"
+                  timestampString = "491937529.135017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1552">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "UIAlertView"
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "UIViewAlertForUnsatisfiableConstraints"
+            moduleName = "">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIViewAlertForUnsatisfiableConstraints"
+                  moduleName = "UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "convertToVideo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "loadGenres()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Videos.swift"
+            timestampString = "491949756.642378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "saveVideoInfo(_:inManagedObjectContext:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Actors.swift"
+            timestampString = "491951892.241666"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchActor(_:inManagedObjectContext:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Videos.swift"
+            timestampString = "491952013.585017"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "saveVideoInfo(_:inManagedObjectContext:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Actors.swift"
+            timestampString = "491994426.937407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "addToDBButton()"
+            landmarkName = "fetchActor(_:inManagedObjectContext:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492029049.184993"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "convertToVideo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "convertToVideo(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2009,11 +2366,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492032639.772927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -2025,13 +2382,301 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheMovieDB/VideosInfoTableViewController.swift"
-            timestampString = "491240969.517951"
+            timestampString = "492030686.554527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "reloadData()"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "loadSeasonInfo(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015665.975668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015665.975886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TMDB.swift"
+            timestampString = "492015629.846349"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "fetchDetailedTVInfo(_:completionHandler:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "loadSeasonInfo(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015700.869194"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015700.869507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/VideosInfoTableViewController.swift"
+            timestampString = "492032639.772927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "loadSeasonInfo(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015701.723243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheMovieDB.VideosInfoTableViewController.loadSeasonInfo (TheMovieDB.Video) -&gt; ()"
+                  moduleName = "TheMovieDB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alongreen/Git/Swift/TheMovieDB/TheMovieDB/VideosInfoTableViewController.swift"
+                  timestampString = "492015701.723445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TableVCExtension.swift"
+            timestampString = "492026806.92929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "addSaveBarButton()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/TableVCExtension.swift"
+            timestampString = "492018091.595999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "dismissFullscreenImage(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492030435.203328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "filterContentForSearchText(_:scope:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492031990.01922"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "convertToVideo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Video.swift"
+            timestampString = "492032204.81571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "Video"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/CoreDataVideosTableViewController.swift"
+            timestampString = "492032264.0352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "convertToVideo(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Video.swift"
+            timestampString = "492032301.239865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "Video"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheMovieDB/Video.swift"
+            timestampString = "492032807.221933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "Video"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

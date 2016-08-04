@@ -6,11 +6,12 @@
         <attribute name="birthplace" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="character_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="death_day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="low_res_poster_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="poster_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_id" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="videos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Videos" inverseName="actors" inverseEntity="Videos" syncable="YES"/>
     </entity>
     <entity name="Videos" representedClassName=".Videos" syncable="YES">
@@ -35,7 +36,7 @@
         <relationship name="actors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Actors" inverseName="videos" inverseEntity="Actors" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Actors" positionX="-36" positionY="-72" width="128" height="208"/>
+        <element name="Actors" positionX="-36" positionY="-72" width="128" height="223"/>
         <element name="Videos" positionX="376" positionY="-24" width="128" height="328"/>
     </elements>
 </model>

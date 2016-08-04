@@ -16,7 +16,7 @@ class IMDB: WebAPIDelegate{
     
     
     
-    func fetchMovies(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
+    func fetchMovies(searchString:String, pageIndex:Int?, completionHandler: (VideosList) -> Void){
        
         
         var index = 1
@@ -42,15 +42,9 @@ class IMDB: WebAPIDelegate{
                 completionHandler(self.dataToMovies(response.data))
                 
         }
-        
-        
-        
-        
-        
-        
-    }
+     }
     
-    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: ([Video]) -> Void){
+    func fetchTVShows(searchString:String, pageIndex:Int?, completionHandler: (VideosList) -> Void){
         
         
         var index = 1
@@ -118,7 +112,7 @@ class IMDB: WebAPIDelegate{
     func fetchTVEpisodes(id:String, season:Int, completionHandler: ([Episode]) -> Void){
     }
     
-    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: ([Video]) -> Void){
+    func fetchMoviesWithURL(url: String,pageIndex: Int?,completionHandler: (VideosList) -> Void){
         
     }
     
@@ -127,16 +121,22 @@ class IMDB: WebAPIDelegate{
     }
 
     
-    func fetchPersonMovies(id: String, completionHandler: ([Video]) -> Void){
+    func fetchPersonMovies(id: String, completionHandler: (VideosList) -> Void){
     }
     
     
-    func dataToMovies(data:NSData?) -> [Video] {
-        var movies = [Video]()
+    func dataToMovies(data:NSData?) -> VideosList {
+        
         
         let json = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+        let totalResults = json["totalResults"].intValue
+        let videoList = VideosList(videos: [Video](),totalPages: 0, totalResults: totalResults)
+
+        
         let isDataExist = json["Response"]
-        print(isDataExist)
+       
+        
         if (isDataExist != "False"){
             let results = json["Search"]
             for (_,subJson):(String, JSON) in results {
@@ -146,11 +146,11 @@ class IMDB: WebAPIDelegate{
                 let movie = ImdbMovie(title: title, id: imdbID)
                 movie.releaseDate = subJson["Year"].stringValue
                 movie.posterURL = subJson["Poster"].stringValue
-                print(movie)
-                movies.append(movie)
+                
+                videoList.add(movie)
             }
         }
-        return movies
+        return videoList
     }
     
     

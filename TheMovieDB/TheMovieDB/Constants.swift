@@ -8,9 +8,9 @@
 
 struct Constants{
     
-     static let MOVIES_TABLE_VIEW_CELL_INDENTIFIER = "MoviesTableViewCell"
-     static let IMDB_API = "http://www.omdbapi.com"
-     static let TMDB_SEARCH_MOVIE_API = "https://api.themoviedb.org/3/search/movie"
+    static let MOVIES_TABLE_VIEW_CELL_INDENTIFIER = "MoviesTableViewCell"
+    static let IMDB_API = "http://www.omdbapi.com"
+    static let TMDB_SEARCH_MOVIE_API = "https://api.themoviedb.org/3/search/movie"
     static let TMDB_SEARCH_TV_API = "https://api.themoviedb.org/3/search/tv"
 
     static let TMDB_MOVIE_WITH_ID_API = "https://api.themoviedb.org/3/movie"
@@ -26,8 +26,8 @@ struct Constants{
     
     
     static let TMDB_KEY = "d8e3e7151a94fe7ff73e52f12b6a7456"
-     static let TMDB_IMAGE_API = "http://image.tmdb.org/t/p/w154/"
-     static let TMDB_LARGE_IMAGE_API = "http://image.tmdb.org/t/p/w500/"
+    static let TMDB_IMAGE_API = "http://image.tmdb.org/t/p/w154/"
+    static let TMDB_LARGE_IMAGE_API = "http://image.tmdb.org/t/p/w500/"
     
     
     static let LARGE_IMAGE_ID = 100

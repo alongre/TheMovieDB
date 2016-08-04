@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UIScrollViewDelegate{
 
     
     //MARK: Outlets
@@ -19,14 +19,12 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    private var resultPerRequest:Int?
+    private var resultPerRequest:Int = 20
     
     //MARK: Properties
     var webAPI: WebAPIDelegate?
-    var movies: [Video]?
-    private var lastVideoCount: Int = 0;
-    private var pageIndex:Int = 1;
-    
+    var movies: VideosList?
+    private var importingData = false
     
     //MARK: ViewControllers Methods
     
@@ -44,9 +42,6 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
        
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        self.movies = [TmdbMovie]()
-        self.movies?.removeAll()
-        
         fetchMovies()
         
 
@@ -85,6 +80,7 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     
     func fetchMovies(pageIndex: Int? = 1){
+        importingData = true
         if isInternetConnectionAvailable(){
             switch segmentControl.selectedSegmentIndex {
             case 0:
@@ -103,20 +99,22 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
             }
         }
     }
-    func reloadData(movies: [Video]){
-        self.resultPerRequest = movies.count
-        print("------Movies for single request: \(movies.count)------")
-        self.movies?.appendContentsOf(movies)
-        print("------Total Movies: \(self.movies?.count)-------")
+    func reloadData(newMovies: VideosList){
+        importingData = false
+        if self.movies == nil{
+             self.movies = newMovies
+        }
+        else
+        {
+            self.movies?.add(newMovies.videos)
+        }
         self.collectionView.reloadData()
     }
 
     
     @IBAction func segmentControlModified(sender: UISegmentedControl)
     {
-        self.movies?.removeAll()
-        pageIndex = 1
-        lastVideoCount = 0
+        self.movies = nil
         fetchMovies()
     }
     
@@ -125,33 +123,61 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     //MARK: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return (movies?.count)!
+        if movies == nil{
+            return 0
+        }
+        return (movies!.count())
     }
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         guard let movieCell = cell as? CollectionViewCell else {return}
-        let movie = movies![indexPath.row]
-        let URL = NSURL(string: movie.lowResPosterURL!)!
-        movieCell.posterImage.af_setImageWithURL(URL)
+        if let movie = movies!.getMovie(indexPath.row){
+            movieCell.posterImage.image = nil
+            if movie.lowResPosterURL == "N/A"{
+                movieCell.posterImage.image = UIImage(named: "no_image")
+            }
+            else{
+                let URL = NSURL(string: movie.lowResPosterURL!)!
+                movieCell.posterImage.af_setImageWithURL(URL)
+            }
+        }
+
+        
+        
     }
     
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+      
+        if (importingData == true)
+        {
+            return
+        }
+        
+        if (isScrolledToTheBottom(scrollView)){
+            let movieCount: Int = (movies?.count())!
+            if movieCount == movies?.totalResults {
+                return
+            }
+            fetchMovies(movieCount / self.resultPerRequest + 1)
+        }
+    }
     
+    func isScrolledToTheBottom(scrollView: UIScrollView) -> Bool{
+        let scrollViewHeight = scrollView.frame.size.height;
+        let scrollContentSizeHeight = scrollView.contentSize.height;
+        let scrollOffset = scrollView.contentOffset.y;
+        
+        if (scrollOffset + scrollViewHeight > scrollContentSizeHeight - 30){
+            return true
+        }
+        return false
+    }
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         
         let movieCell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath: indexPath) as! CollectionViewCell
-                
-        print(indexPath.row)
-        if (indexPath.row > (movies?.count)! - 10){
-            
-            if movies?.count > lastVideoCount{
-                lastVideoCount = (movies?.count)!
-                pageIndex = pageIndex + 1
-                fetchMovies(pageIndex)
-            }
-        }
         return movieCell
         
     }
@@ -168,9 +194,10 @@ class ChartsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         
         if isInternetConnectionAvailable(){
-            let movie = movies![indexPath.row]
+            let movie = movies!.getMovie(indexPath.row)
+           // print("id = \(movie.id), title = \(movie.title)")
             collectionView.allowsSelection = false
-            webAPI?.fetchDetailedMovieInfo(movie.id, completionHandler: loadVideoInfo)
+            webAPI?.fetchDetailedMovieInfo(movie!.id, completionHandler: loadVideoInfo)
         }
 
         

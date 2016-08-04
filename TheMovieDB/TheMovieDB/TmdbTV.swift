@@ -13,6 +13,7 @@ class TmdbTV: Video{
     
     //MARK: Stored Properties
 
+    private var _tvPeriod: String?
     private var _releaseDate: String?
     private var _endDate: String?
     private var _numberOfSeason:Int?
@@ -28,13 +29,10 @@ class TmdbTV: Video{
     //MARK: Computed Properties
     override var releaseDate: String?{
         get{
-            if _endDate != nil{
-                
-                return "(\(_releaseDate!) - \(_endDate!))"
-            }
             return _releaseDate!
         }
         set{
+            _releaseDate = newValue
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             dateFormatter.lenient = true
@@ -50,6 +48,16 @@ class TmdbTV: Video{
             
         }
     }
+    var tvPeriod: String?{
+        get{
+            if _endDate != nil{
+                
+                return "(\(_releaseDate!) - \(_endDate!))"
+            }
+            return nil
+        }
+    }
+    
     
     
     var endDate: String? {
@@ -57,6 +65,7 @@ class TmdbTV: Video{
             return _endDate
         }
         set{
+            _endDate = newValue
             if newValue != nil{
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -71,10 +80,6 @@ class TmdbTV: Video{
                     
                 }
             }
-            else{
-                _endDate = newValue
-            }
-            
         }
 
     }

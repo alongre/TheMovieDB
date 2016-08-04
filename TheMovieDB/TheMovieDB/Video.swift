@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Video {
+class Video: Equatable {
 
     //MARK: - Stored Properties
     private var _title: String
@@ -29,7 +29,7 @@ class Video {
             }
             else{
                 let poster = _posterURL!
-                if _posterURL?.containsString(Constants.TMDB_LARGE_IMAGE_API) == false{
+                if _posterURL?.containsString("http:") == false{
                     _posterURL = Constants.TMDB_LARGE_IMAGE_API + poster
                     _lowResPosterURL =  Constants.TMDB_IMAGE_API + poster
                 }
@@ -63,10 +63,23 @@ class Video {
     
     var releaseDate: String? {
         get{
-            return _releaseDate
+            return _releaseDate!
         }
         set{
             _releaseDate = newValue
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.lenient = true
+            let date = dateFormatter.dateFromString(newValue!)
+            
+            if let date = date {
+                let calendar = NSCalendar.currentCalendar()
+                let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+                print(components.year)
+                _releaseDate = "\(components.day)-\(components.month)-\(components.year)"
+                
+            }
+            
         }
     }
 
@@ -182,6 +195,33 @@ class Video {
         return _title
     }
     
+  
+
+    
+
+}
+
+func == (lhs: Video, rhs: Video) -> Bool {
+    
+            return lhs.id == rhs.id
+}
+
+class VideoFacory{
+    
+    
+    class func generateVideo(videoInfo: Videos) -> Video{
+        if String(videoInfo.video_type!) == String(VideoType.Movie) {
+            return TmdbMovie(title: videoInfo.title!, id: videoInfo.unique_id!, imdbID: videoInfo.imdb_id!)
+        }
+        if String(videoInfo.video_type!) == String(VideoType.TV) {
+            return TmdbTV(title: videoInfo.title!, id: videoInfo.unique_id!, imdbID: videoInfo.imdb_id!)
+        }
+        if String(videoInfo.video_type!) == String(VideoType.Episode) {
+            return Episode(title: videoInfo.title!, id: videoInfo.unique_id!)
+        }
+        return Video(title: videoInfo.title!, id: videoInfo.unique_id!)
+    }
+
 }
 
 

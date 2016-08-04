@@ -62,7 +62,7 @@ class EpisodesTableViewController: UITableViewController {
         cell.episodeNumberLabel.text = String(episode.episode_number!)
         
         
-        
+        cell.posterImage.image  = nil
         if episode.lowResPosterURL == "N/A"{
             cell.posterImage.image = UIImage(named: "no_image")
         }

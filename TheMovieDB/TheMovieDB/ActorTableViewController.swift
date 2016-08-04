@@ -56,6 +56,7 @@ class ActorTableViewController: UITableViewController {
         let actor = actors![indexPath.row]
         cell.actorName.text = actor.Name
         cell.characterName.text = actor.CharacterName
+        cell.actorPoster.image = nil
         
         if actor.posterURL == "N/A"{
             cell.actorPoster.image = UIImage(named: "no_image")

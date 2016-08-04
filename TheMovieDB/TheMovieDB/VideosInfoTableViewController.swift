@@ -38,26 +38,38 @@ class VideosInfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  tableView.estimatedRowHeight = 100
+
         
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(self.imageTapped(_:)))
         posterImage.userInteractionEnabled = true
         posterImage.addGestureRecognizer(tapGestureRecognizer)
-        addToDBButton()
+       
         
         reloadData()
+        updateDBButton()
   }
     
     
-    func addToDBButton(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self,action:#selector(self.saveVideo(_:)))
+    func updateDBButton(){
+       
+        
+        navigationItem.rightBarButtonItems?.removeAll()
+        if video?.videoType == VideoType.Episode{
+            let rightBarButton = UIBarButtonItem()
+           
+            
+            navigationItem.rightBarButtonItem = rightBarButton
+            
+        }
+        else if ((Videos.fetchVideo(video!, inManagedObjectContext: self.mangedObjectContext!)) != nil){
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self,action:#selector(self.deleteVideo(_:)))
+        }
+        else{
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self,action:#selector(self.saveVideo(_:)))
+        }
         
     }
     
-    func saveVideo(sender: AnyObject)
-    {
-        
-    }
     
     
     
@@ -68,8 +80,6 @@ class VideosInfoTableViewController: UITableViewController {
 
     }
     
-   
-    
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         self.screenRotated(fromInterfaceOrientation)
     }
@@ -77,22 +87,23 @@ class VideosInfoTableViewController: UITableViewController {
     //MARK: - Table view methods
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == Section.Movie.rawValue{
-
-            if video?.actors != nil{
-                loadActorsInfo((video?.actors)!)
+            if indexPath.row == Row.Cast.rawValue{
+                if video?.actors != nil{
+                    loadActorsInfo((video?.actors)!)
+                }
             }
-//            else{
-//                
-//            
-//                if indexPath.row == Row.Cast.rawValue {
-//                    WebFactory.getWebAPI(WebAPI.TMDB).fetchCastList((video?.id)!, videoType: (video?.videoType)!, completionHandler: loadActorsInfo)
-//                }
-//            }
         }
         else{
             
             guard let tv = video as? TmdbTV else {return}
-            loadSeasonInfo(tv)
+            if tv.seasons?.count == 0{
+                  WebFactory.getWebAPI(WebAPI.TMDB).fetchDetailedTVInfo(tv.id, completionHandler: loadSeasonInfo)
+            }
+            else{
+                
+            
+                loadSeasonInfo(tv)
+            }
         }
         
     }
@@ -115,24 +126,46 @@ class VideosInfoTableViewController: UITableViewController {
     
     
     //MARK: - Core Date
-    func saveVideo(){
+    func saveVideo(sender: AnyObject){
         
         mangedObjectContext?.performBlock{
             _ = Videos.saveVideoInfo(self.video!, inManagedObjectContext: self.mangedObjectContext!)
             do{
                 try self.mangedObjectContext?.save()
+                self.displayMessage("Video was added to My Videos")
+                self.updateDBButton()
             } catch let error{
               print("Core Data Error \(error)")
             }
         }
         
+        
     }
+    
+    func deleteVideo(sender: AnyObject){
+        
+        mangedObjectContext?.performBlock{
+            _ = Videos.deleteVideo(self.video!, inManagedObjectContext: self.mangedObjectContext!)
+            do{
+                try self.mangedObjectContext?.save()
+                self.displayMessage("Video was removed from My Favorites")
+                self.updateDBButton()
+            } catch let error{
+                print("Core Data Error \(error)")
+            }
+        }
+       
+        
+    }
+
+    
+   
     
     //MARK: - Load data into controller
     
     func reloadData(){
       
-        
+       
         
         if let newVideo = video{
             
@@ -160,10 +193,12 @@ class VideosInfoTableViewController: UITableViewController {
             loadDataFromIMDB()
             if newVideo.videoType == VideoType.TV{
                 tvSeasonsTextView.text = newVideo.description
+                dateLabel.text = (newVideo as! TmdbTV).tvPeriod
             }
             loadActors(video!.actors)
             actorsTextView.scrollRectToVisible(CGRectZero, animated: false)
- 
+            
+           
             
         }
         
@@ -212,13 +247,10 @@ class VideosInfoTableViewController: UITableViewController {
         else{
             imdbID = (video as! TmdbTV).imdbID
         }
-        
-    
-        
-            if imdbID.characters.count > 0 {
+        if imdbID.characters.count > 0 {
                 WebFactory.getWebAPI(WebAPI.IMDB).fetchDetailedMovieInfo(imdbID, completionHandler: updateIMDBDetails)
                 return
-            }
+        }
         
         
         votersLabel.text = video!.voters
@@ -228,14 +260,16 @@ class VideosInfoTableViewController: UITableViewController {
         
     }
     
-    func updateIMDBDetails(video: Video){
+    func updateIMDBDetails(fetchedVideo: Video){
         
-        votersLabel.text = video.voters
-        ratingLabel.text = video.rating
-        directorTextView.text = video.director
-
+        votersLabel.text = fetchedVideo.voters
+          ratingLabel.text = fetchedVideo.rating
+        directorTextView.text = fetchedVideo.director
         
-    }
+        video?.rating = fetchedVideo.rating
+        video?.voters = fetchedVideo.voters
+        video?.director = fetchedVideo.director
+  }
 
     
     //MARK: - Segue
@@ -251,16 +285,14 @@ class VideosInfoTableViewController: UITableViewController {
         
     }
    
-    func loadSeasonInfo(tv: TmdbTV)
+    func loadSeasonInfo(video: Video)
     {
         
         if let seasonTVController = storyboard?.instantiateViewControllerWithIdentifier("SeasonList") as? TVSeasonsTableViewController {
-            seasonTVController.tv = tv
+            
+            seasonTVController.tv = (video as! TmdbTV)
             navigationController?.pushViewController(seasonTVController, animated: true)
         }
-        
-        
-        
     }
     
 }

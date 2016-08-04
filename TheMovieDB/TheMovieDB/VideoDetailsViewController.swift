@@ -8,12 +8,12 @@
 
 import UIKit
 
-class VideoDetailsViewController: UITableView {
-    
-    
-    func viewDidLoad() {
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
-    }
-
-}
+//class VideoDetailsViewController: UITableView {
+//    
+//    
+//    func viewDidLoad() {
+//        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//
+//    }
+//
+//}

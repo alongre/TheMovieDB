@@ -11,11 +11,7 @@ import CoreData
 
 class ActorDetailTableViewController: UITableViewController {
 
-    
-    
-    
-    
-    
+     
     //MARK - Outlets
     
     @IBOutlet weak var posterImage: UIImageView!
@@ -31,7 +27,7 @@ class ActorDetailTableViewController: UITableViewController {
 
     var mangedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var actor: Character?
-    var movies: [Video]?
+    var movies: VideosList?
     
     
     //MARK: - Life Cycle view
@@ -45,24 +41,16 @@ class ActorDetailTableViewController: UITableViewController {
 
         posterImage.userInteractionEnabled = true
         posterImage.addGestureRecognizer(tapGestureRecognizer)
-        addToDBButton()
+      
 
-        
+        updateDBButton()
         
         reloadData()
     }
     
     
     
-    func addToDBButton(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self,action:#selector(self.saveVideo(_:)))
-        
-    }
     
-    func saveVideo(sender: AnyObject)
-    {
-        
-    }
     
     
     
@@ -76,6 +64,18 @@ class ActorDetailTableViewController: UITableViewController {
     }
 
     
+    
+    func updateDBButton(){
+        
+        
+        navigationItem.rightBarButtonItems?.removeAll()
+        let rightBarButton = UIBarButtonItem()
+        navigationItem.rightBarButtonItem = rightBarButton
+            
+        
+        
+    }
+
     
     
     //MARK: - Load Data
@@ -119,7 +119,7 @@ class ActorDetailTableViewController: UITableViewController {
 
     
     //MARK: - Segue
-    func loadFilmsInfo(movies: [Video])
+    func loadFilmsInfo(movies: VideosList)
     {
         
         
