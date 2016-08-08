@@ -59,3 +59,6 @@ class Actors: NSManagedObject {
 
     
 }
+
+
+

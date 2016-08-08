@@ -168,7 +168,8 @@ class CoreDataVideosTableViewController: CoreDataTableViewController,UISearchBar
             //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             if let videoInfo = fetchedResultsController?.objectAtIndexPath(indexPath) as? Videos{
                 let video = Video(title: videoInfo.title!,id: videoInfo.unique_id!)
-                Videos.deleteVideo(video, inManagedObjectContext: mangedObjectContext!)
+                //Videos.deleteVideo(video, inManagedObjectContext: mangedObjectContext!)
+                deleteVideo(video)
                 tableView.reloadData()
             }
         } else if editingStyle == .Insert {
@@ -199,8 +200,6 @@ class CoreDataVideosTableViewController: CoreDataTableViewController,UISearchBar
             _ = Videos.deleteVideo(video, inManagedObjectContext: self.mangedObjectContext!)
             do{
                 try self.mangedObjectContext?.save()
-                self.displayMessage("Video was removed from My Favorites")
-                
             } catch let error{
                 print("Core Data Error \(error)")
             }
@@ -245,8 +244,13 @@ class CoreDataVideosTableViewController: CoreDataTableViewController,UISearchBar
     private func loadActors(actors: NSSet) -> [Character]{
         
         var actorsList = [Character]()
+        
         var actorArray = Array(actors)
-        actorArray.sortInPlace({ Int($0.index) < Int($1.index) })
+        actorArray.sortInPlace({ (a:AnyObject,b:AnyObject) in
+            let actorA = a as! Actors
+            let actorB = b as! Actors
+            return Int(actorA.index!) < Int(actorB.index!)
+        })
         for actorInfo in actorArray {
             let actorFromDB = actorInfo as! Actors
             let actor = Character(name: actorFromDB.name!)
